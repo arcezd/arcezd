@@ -9,7 +9,7 @@
     <img src="https://www.gravatar.com/avatar/a44ef9d4aeebca73f6799c70b15ebdbf.jpg?s=256" alt="gravatar" width="80" height="80">
   </a>
 
-  <h3 align="center">Diego **Arce**</h3>
+  <h3 align="center">Diego <strong>Arce<strong></h3>
 
   <p align="center">
     RESUME
