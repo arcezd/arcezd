@@ -1,0 +1,24 @@
+{
+  "name": "resume-arcezd",
+  "version": "0.0.1",
+  "description": "Task for html to PDF",
+  "main": "task.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "pdf": "node task.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArcezD/resume.git"
+  },
+  "author": "Diego Arce <Diego@arce.cr> (https://github.com/ArcezD)",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/ArcezD/resume/issues"
+  },
+  "homepage": "https://github.com/ArcezD/resume#readme",
+  "dependencies": {
+    "mustache": "^4.0.0",
+    "puppeteer": "^2.0.0"
+  }
+}
