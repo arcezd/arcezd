@@ -38,7 +38,7 @@ jobs:
         draft: false
         prerelease: false
     - name: Upload Resume JSON to assets
-      id: upload-release-asset 
+      id: upload-release-asset-json
       uses: actions/upload-release-asset@v1.0.1
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -48,7 +48,7 @@ jobs:
         asset_name: diego.arce_resume_en.json
         asset_content_type: application/json
     - name: Upload Resume PDF to assets
-      id: upload-release-asset 
+      id: upload-release-asset-pdf
       uses: actions/upload-release-asset@v1.0.1
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
