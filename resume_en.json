@@ -1,0 +1,167 @@
+{
+  "info": {
+    "firstname": "Diego",
+    "lastname": "Arce",
+    "secondSurname": "Espinoza",
+    "bio": [
+      "Sr Software Developer with 6+ years of industry experience, passionated about new technologies,",
+      "with special interest about the big potential of serverless applications,",
+      "mostly by its low cost and high scalability. AWS Solutions Architect in-progress."
+    ]
+  },
+  "contact": {
+    "website": {
+      "label": "diego.arce.cr",
+      "href": "https://diego.arce.cr"
+    },
+    "email": {
+      "label": "diego@arce.cr",
+      "href": "mailto:diego@arce.cr"
+    },
+    "skype": {
+      "label": "arcezd",
+      "href": "skype:arcezd"
+    },
+    "phoneNumber": {
+      "label": "(+506) 7016-0087",
+      "href": "tel:+506-70160087"
+    }
+  },
+  "socialMedia": {
+    "github": {
+      "label": "github.arce.cr",
+      "href": "http://github.arce.cr"
+    },
+    "linkedIn": {
+      "label": "linkedIn.arce.cr",
+      "href": "http://linkedIn.arce.cr"
+    },
+    "twitter": {
+      "label": "twitter.arce.cr",
+      "href": "http://twitter.arce.cr"
+    }
+  },
+  "experiences": [{
+      "position": "Software developer",
+      "place": "Promerica Financial Corporation TI",
+      "location": "Heredia, CR",
+      "since": "2018",
+      "to": "PRESENT",
+      "details": [
+        "Development and implementation of microservices using technologies like NodeJS, Kotlin and JAVA",
+        "Containers Orchestration using Docker Swarm"
+      ]
+    },
+    {
+      "position": "Software architect",
+      "place": "Grupo Mutual",
+      "location": "Alajuela, CR",
+      "since": "2016",
+      "to": "2018",
+      "details": [
+        "Development and implementation of microservices architecture using JAVA, Spring Cloud, Netlfix Zuul, Netflix Eureka and Spring Framework",
+        "Design and development for iOS applications. UX / UI for Mobile Banking Application"
+      ]
+    },
+    {
+      "position": "Support Systems",
+      "place": "Grupo Mutual",
+      "location": "Alajuela, CR",
+      "since": "2015",
+      "to": "2016",
+      "details": [
+        "Analysis and bugs solving in the banking core software",
+        "Oracle Forms 11g , Oracle Reports 11g and Oracle PL / SQL (Procedures, Triggers, etc.)"
+      ]
+    },
+    {
+      "position": "Technical Support",
+      "place": "Grupo Mutual",
+      "location": "Alajuela, CR",
+      "since": "2013",
+      "to": "2014",
+      "details": [
+        "Installation and maintenance of software and hardware of Dell equipment for final users.",
+        "Architecture maintenance for Desktop virtualization using Citrix Xen Desktop."
+      ]
+    }
+  ],
+  "projects": [{
+    "name": "Microservices architecture improvement",
+    "to": "2019",
+    "workplace": "Promerica Financial Corporation TI",
+    "details": [
+      "Docker swarm clusters deployment automation using ANSIBLE."
+    ]
+  },
+  {
+    "name": "Microservices architecture implementation from zero",
+    "since": "2016",
+    "to": "2018",
+    "workplace": "Grupo Mutual",
+    "details": [
+      "Design and implement a microservices architecture patterns. (Event-driven, circuit breakers).",
+      "DevOps strategy for the deployment of Microservices using Docker containers.",
+      "Deploy an Docker Swarm cluster for container Orchestration in production.",
+      "Development of Core Microservices architecture componentes using Spring Cloud Platform. (Netflix Eureka, Spring Cloud Config, Netlix Zuul ApiGateway)"
+    ]
+  }],
+  "education": [{
+      "since": "2011",
+      "to": "In-Progress",
+      "title": "Bachelor in System Engineering",
+      "place": "Universidad de las Ciencias Empresariales",
+      "location": "Alajuela, CR"
+    },
+    {
+      "since": "2007",
+      "to": "2009",
+      "title": "Technical degree in Accounting",
+      "place": "Colegio Técnico Profesional Jesús Ocaña Rojas",
+      "location": "Alajuela, CR"
+    },
+    {
+      "to": "2013",
+      "title": "COURSE | iOS Development",
+      "place": "ULACIT"
+    },
+    {
+      "to": "2017",
+      "title": "COURSE | Ethical Hacking",
+      "place": "ULACIT"
+    },
+    {
+      "to": "2017",
+      "title": "COURSE | Computer Forensics",
+      "place": "ULACIT"
+    },
+    {
+      "to": "2017",
+      "title": "COURSE | Android Development",
+      "place": "Babel Learning"
+    },
+    {
+      "to": "2018",
+      "title": "COURSE | iOS Development",
+      "place": "Babel Learning"
+    }
+  ],
+  "skills": {
+    "languages": [
+      "Javascript",
+      "Java",
+      "Swift",
+      "Kotlin"
+    ],
+    "frameworks": [
+      "NodeJS",
+      "Spring Boot"
+    ],
+    "Other": [
+      "Docker",
+      "Docker Swarm",
+      "Kubernetes",
+      "AWS"
+    ]
+  }
+}
