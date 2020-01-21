@@ -29,3 +29,7 @@
 ## Contact
 
 Diego Arce - [@arcezd](http://twitter.arce.cr) - diego@arce.cr
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
