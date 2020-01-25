@@ -37,16 +37,17 @@ jobs:
         release_name: Release ${{ github.ref }}
         draft: false
         prerelease: false
-    - name: Upload Resume JSON to assets
-      id: upload-release-asset-json
-      uses: actions/upload-release-asset@v1.0.1
+    - name: Upload Resume JSON to S3 bucket
+      id: upload-release-asset-json-to-s3
+      uses: arcezd/s3-cp-action@v0.0.1
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        DEST_DIR: cv/api
+        SOURCE_DIR: resume_en.json
       with:
-        upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps 
-        asset_path: ./resume_en.json
-        asset_name: diego.arce_resume_en.json
-        asset_content_type: application/json
+        args: --follow-symlinks --metadata '{"Content-Type":"application/json"}'
     - name: Upload Resume PDF to assets
       id: upload-release-asset-pdf
       uses: actions/upload-release-asset@v1.0.1
