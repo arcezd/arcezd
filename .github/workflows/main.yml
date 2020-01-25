@@ -47,7 +47,7 @@ jobs:
         DEST_DIR: cv/api
         SOURCE_DIR: resume_en.json
       with:
-        args: --follow-symlinks --metadata '{"Content-Type":"application/json"}'
+        args: --follow-symlinks
     - name: Upload Resume PDF to assets
       id: upload-release-asset-pdf
       uses: actions/upload-release-asset@v1.0.1
