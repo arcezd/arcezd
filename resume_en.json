@@ -4,9 +4,10 @@
     "lastname": "Arce",
     "secondSurname": "Espinoza",
     "bio": [
-      "Sr Software Developer with 6+ years of industry experience, passionated about new technologies,",
+      "Sr Software Developer with 6+ years of industry experience,",
+      "passionated about new technologies,",
       "with special interest about the big potential of serverless applications,",
-      "mostly by its low cost and high scalability. AWS Solutions Architect in-progress."
+      "mostly by its low cost and high scalability."
     ]
   },
   "contact": {
