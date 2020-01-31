@@ -11,7 +11,7 @@ const RESUME_LANGUAGE = process.env.RESUME_LANGUAGE || 'en';
 
 const TAG_REF_V = process.env.TAG_REF_V;
 const COMMIT_SHA = process.env.COMMIT_SHA;
-const REPO_URL = process.env.REPO_URL;
+const REPO_URL = `https://github.com/${process.env.REPO_URL}`;
 
 const resumeTemplatePath = path.join(__dirname, HTML_TEMPLATE_SUBFOLDER, `resume_${RESUME_LANGUAGE}.html`);
 const resumeTemplateData = path.join(__dirname, `resume_${RESUME_LANGUAGE}.json`);
