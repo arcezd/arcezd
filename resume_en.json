@@ -43,7 +43,7 @@
       "href": "http://twitter.arce.cr"
     }
   },
-  "experiences": [{
+  "experience": [{
       "position": "Software developer",
       "place": "Promerica Financial Corporation TI",
       "location": "Heredia, CR",
@@ -149,14 +149,14 @@
       "place": "Babel Learning"
     }
   ],
-  "contributions": {
-    "node-oracledb": {
-      "pr": [{
-        "id": 1190,
-        "url": "https://github.com/oracle/node-oracledb/pull/1190"
-      }]
+  "contributions": [{
+    "repo": "node-oracledb",
+    "url": "https://github.com/oracle/node-oracledb",
+    "lastPR": {
+      "id": 1190,
+      "url": "https://github.com/oracle/node-oracledb/pull/1190"
     }
-  },
+  }],
   "skills": {
     "languages": [
       "Javascript",

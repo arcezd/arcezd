@@ -18,8 +18,11 @@ jobs:
       uses: actions/checkout@v2
       with:
         repository: arcezd/html-resume
-        ref: 'v1.0.0'
+        ref: 'v1.0.5'
         path: html
+    - name: Setting compilation vars
+      id: vars
+      run: echo ::set-output name=sha_short::$(git rev-parse --short HEAD)
     - name: Use Node.js
       uses: actions/setup-node@v1
       with:
@@ -31,12 +34,18 @@ jobs:
       run: npm run pdf
       env:
         HTML_TEMPLATE_SUBFOLDER: html/default
+        TAG_REF_V: ${{ github.ref }}
+        COMMIT_SHA: ${{ steps.vars.outputs.sha_short }}
+        GITHUB_REPO: ${{ github.repository }}
     - name: Run task.js for PDF generation [ES]
       id: pdf-generation-es
       run: npm run pdf
       env:
         HTML_TEMPLATE_SUBFOLDER: html/default
         RESUME_LANGUAGE: es
+        TAG_REF_V: ${{ github.ref }}
+        COMMIT_SHA: ${{ steps.vars.outputs.sha_short }}
+        GITHUB_REPO: ${{ github.repository }}
     - name: Create Release
       id: create_release
       uses: actions/create-release@v1.0.0
@@ -69,6 +78,18 @@ jobs:
         SOURCE_DIR: resume_es.json
       with:
         args: --follow-symlinks
+    - name: Upload resume PDF to artifacts [EN]
+      id: upload-pdf-artifact-en
+      uses: actions/upload-artifact@v1
+      with:
+        name: diego.arce_resume_en.pdf
+        path: diego.arce_resume_en.pdf
+    - name: Upload resume PDF to artifacts [ES]
+      id: upload-pdf-artifact-es
+      uses: actions/upload-artifact@v1
+      with:
+        name: diego.arce_resume_es.pdf
+        path: diego.arce_resume_es.pdf
     - name: Upload Resume PDF to assets [EN]
       id: upload-release-asset-pdf-en
       uses: actions/upload-release-asset@v1.0.1

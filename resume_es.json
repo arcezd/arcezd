@@ -43,12 +43,12 @@
       "href": "http://twitter.arce.cr"
     }
   },
-  "experiences": [{
+  "experience": [{
       "position": "Desarrollador de Software",
       "place": "Promerica Financial Corporation TI",
       "location": "Heredia, CR",
       "since": "2018",
-      "to": "PRESENTE",
+      "to": "ACTUAL",
       "details": [
         "Desarrollo e implementación de microservicios utilizando tecnologías como Node.js, Kotlin y Java",
         "Orquestación de contenedores utilizando Docker Swarm"
@@ -149,14 +149,14 @@
       "place": "ULACIT"
     }
   ],
-  "contributions": {
-    "node-oracledb": {
-      "pr": [{
-        "id": 1190,
-        "url": "https://github.com/oracle/node-oracledb/pull/1190"
-      }]
+  "contributions": [{
+    "repo": "node-oracledb",
+    "url": "https://github.com/oracle/node-oracledb",
+    "lastPR": {
+      "id": 1190,
+      "url": "https://github.com/oracle/node-oracledb/pull/1190"
     }
-  },
+  }],
   "skills": {
     "languages": [
       "Javascript",
