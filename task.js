@@ -11,7 +11,7 @@ const RESUME_LANGUAGE = process.env.RESUME_LANGUAGE || 'en';
 
 const TAG_REF_V = process.env.TAG_REF_V;
 const COMMIT_SHA = process.env.COMMIT_SHA;
-const REPO_URL = `https://github.com/${process.env.REPO_URL}`;
+const GITHUB_REPO_URL = `https://github.com/${process.env.GITHUB_REPO}`;
 
 const resumeTemplatePath = path.join(__dirname, HTML_TEMPLATE_SUBFOLDER, `resume_${RESUME_LANGUAGE}.html`);
 const resumeTemplateData = path.join(__dirname, `resume_${RESUME_LANGUAGE}.json`);
@@ -26,13 +26,13 @@ async function renderResumeHtml() {
     const dataStr = await readFile(resumeTemplateData, 'utf8');
     let data = JSON.parse(dataStr);
     // Load compilation data
-    if (TAG_REF_V && COMMIT_SHA && REPO_URL) {
+    if (TAG_REF_V && COMMIT_SHA && GITHUB_REPO_URL) {
       data = {
         ...data,
         build: {
           tagRef: TAG_REF_V,
           commitSha: COMMIT_SHA,
-          repoUrl: REPO_URL
+          repoUrl: GITHUB_REPO_URL
         }
       }
     }
