@@ -9,17 +9,34 @@ const fs = require('fs'),
 const HTML_TEMPLATE_SUBFOLDER = process.env.HTML_TEMPLATE_SUBFOLDER || 'default';
 const RESUME_LANGUAGE = process.env.RESUME_LANGUAGE || 'en';
 
+const TAG_REF_V = process.env.TAG_REF_V;
+const COMMIT_SHA = process.env.COMMIT_SHA;
+const REPO_URL = process.env.REPO_URL;
+
 const resumeTemplatePath = path.join(__dirname, HTML_TEMPLATE_SUBFOLDER, `resume_${RESUME_LANGUAGE}.html`);
 const resumeTemplateData = path.join(__dirname, `resume_${RESUME_LANGUAGE}.json`);
 const resumeHtmlPath = path.join(__dirname, HTML_TEMPLATE_SUBFOLDER, `diego.arce_resume_${RESUME_LANGUAGE}.html`);
 const resumePdfPath = path.join(__dirname, `diego.arce_resume_${RESUME_LANGUAGE}.pdf`);
 
+// Render resume to html
 async function renderResumeHtml() {
   try {
     console.log(`Loading template file in memory.`);
     const template = await readFile(resumeTemplatePath, 'utf8');
-    const data = await readFile(resumeTemplateData, 'utf8');
-    const generatedHtml = Mustache.render(template, JSON.parse(data));
+    const dataStr = await readFile(resumeTemplateData, 'utf8');
+    let data = JSON.parse(data);
+    // Load compilation data
+    if (TAG_REF_V && COMMIT_SHA && REPO_URL) {
+      data = {
+        ...data,
+        build: {
+          tagRef: TAG_REF_V,
+          commitSha: COMMIT_SHA,
+          repoUrl: REPO_URL
+        }
+      }
+    }
+    const generatedHtml = Mustache.render(template, data);
     writeFile(resumeHtmlPath, generatedHtml);
     return
   } catch (err) {
@@ -28,6 +45,7 @@ async function renderResumeHtml() {
   }
 }
 
+// Generate pdf from html
 async function generateResumePdf(htmlPath) {
   try {
     console.log(`Starting PDF generation`);
