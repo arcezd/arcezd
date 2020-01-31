@@ -84,6 +84,12 @@ jobs:
       with:
         name: diego.arce_resume_en.pdf
         path: diego.arce_resume_en.pdf
+    - name: Upload resume PDF to artifacts [ES]
+      id: upload-pdf-artifact-es
+      uses: actions/upload-artifact@v1
+      with:
+        name: diego.arce_resume_es.pdf
+        path: diego.arce_resume_es.pdf
     - name: Upload Resume PDF to assets [EN]
       id: upload-release-asset-pdf-en
       uses: actions/upload-release-asset@v1.0.1
