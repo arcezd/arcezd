@@ -47,7 +47,7 @@
       "place": "Promerica Financial Corporation TI",
       "location": "Heredia, CR",
       "since": "2018",
-      "to": "PRESENTE",
+      "to": "ACTUAL",
       "details": [
         "Desarrollo e implementación de microservicios utilizando tecnologías como Node.js, Kotlin y Java",
         "Orquestación de contenedores utilizando Docker Swarm"
