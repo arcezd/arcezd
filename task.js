@@ -6,10 +6,10 @@ const fs = require('fs'),
   writeFile = utils.promisify(fs.writeFile),
   Mustache = require('mustache');
 
-const HTML_TEMPLATE_SUBFOLDER = process.env.HTML_TEMPLATE_SUBFOLDER || 'html';
-const RESUME_LANGUAGE = process.env.HTML_TEMPLATE_SUBFOLDER || 'en';
+const HTML_TEMPLATE_SUBFOLDER = process.env.HTML_TEMPLATE_SUBFOLDER || 'default';
+const RESUME_LANGUAGE = process.env.RESUME_LANGUAGE || 'en';
 
-const resumeTemplatePath = path.join(__dirname, HTML_TEMPLATE_SUBFOLDER, 'resume.html');
+const resumeTemplatePath = path.join(__dirname, HTML_TEMPLATE_SUBFOLDER, `resume_${RESUME_LANGUAGE}.html`);
 const resumeTemplateData = path.join(__dirname, `resume_${RESUME_LANGUAGE}.json`);
 const resumeHtmlPath = path.join(__dirname, HTML_TEMPLATE_SUBFOLDER, `diego.arce_resume_${RESUME_LANGUAGE}.html`);
 const resumePdfPath = path.join(__dirname, `diego.arce_resume_${RESUME_LANGUAGE}.pdf`);
