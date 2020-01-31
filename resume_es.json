@@ -148,14 +148,14 @@
       "place": "ULACIT"
     }
   ],
-  "contributions": {
-    "node-oracledb": {
-      "pr": [{
-        "id": 1190,
-        "url": "https://github.com/oracle/node-oracledb/pull/1190"
-      }]
+  "contributions": [{
+    "repo": "node-oracledb",
+    "url": "https://github.com/oracle/node-oracledb",
+    "lastPR": {
+      "id": 1190,
+      "url": "https://github.com/oracle/node-oracledb/pull/1190"
     }
-  },
+  }],
   "skills": {
     "languages": [
       "Javascript",
