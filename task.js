@@ -24,7 +24,7 @@ async function renderResumeHtml() {
     console.log(`Loading template file in memory.`);
     const template = await readFile(resumeTemplatePath, 'utf8');
     const dataStr = await readFile(resumeTemplateData, 'utf8');
-    let data = JSON.parse(data);
+    let data = JSON.parse(dataStr);
     // Load compilation data
     if (TAG_REF_V && COMMIT_SHA && REPO_URL) {
       data = {
