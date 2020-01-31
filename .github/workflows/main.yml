@@ -80,7 +80,7 @@ jobs:
         args: --follow-symlinks
     - name: Upload resume PDF to artifacts [EN]
       id: upload-pdf-artifact-en
-      - uses: actions/upload-artifact@v1
+      uses: actions/upload-artifact@v1
       with:
         name: diego.arce_resume_en.pdf
         path: diego.arce_resume_en.pdf
