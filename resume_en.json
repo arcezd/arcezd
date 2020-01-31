@@ -5,7 +5,7 @@
     "secondSurname": "Espinoza",
     "bio": [
       "Sr Software Developer with 6+ years of industry experience,",
-      "passionated about new technologies,",
+      "passionate about new technologies,",
       "with special interest about the big potential of serverless applications,",
       "mostly by its low cost and high scalability."
     ]
@@ -49,7 +49,7 @@
       "since": "2018",
       "to": "PRESENT",
       "details": [
-        "Development and implementation of microservices using technologies like NodeJS, Kotlin and JAVA",
+        "Development and implementation of microservices using technologies like Node.js, Kotlin and Java",
         "Containers Orchestration using Docker Swarm"
       ]
     },
@@ -60,7 +60,7 @@
       "since": "2016",
       "to": "2018",
       "details": [
-        "Development and implementation of microservices architecture using JAVA, Spring Cloud, Netlfix Zuul, Netflix Eureka and Spring Framework",
+        "Development and implementation of microservices architecture using Java, Spring Cloud, Netflix Zuul, Netflix Eureka and Spring Framework",
         "Design and development for iOS applications. UX / UI for Mobile Banking Application"
       ]
     },
@@ -83,30 +83,31 @@
       "to": "2014",
       "details": [
         "Installation and maintenance of software and hardware of Dell equipment for final users.",
-        "Architecture maintenance for Desktop virtualization using Citrix Xen Desktop."
+        "Architecture maintenance for Desktop virtualization using Citrix XenDesktop."
       ]
     }
   ],
   "projects": [{
-    "name": "Microservices architecture improvement",
-    "to": "2019",
-    "workplace": "Promerica Financial Corporation TI",
-    "details": [
-      "Docker swarm clusters deployment automation using ANSIBLE."
-    ]
-  },
-  {
-    "name": "Microservices architecture implementation from zero",
-    "since": "2016",
-    "to": "2018",
-    "workplace": "Grupo Mutual",
-    "details": [
-      "Design and implement a microservices architecture patterns. (Event-driven, circuit breakers).",
-      "DevOps strategy for the deployment of Microservices using Docker containers.",
-      "Deploy an Docker Swarm cluster for container Orchestration in production.",
-      "Development of Core Microservices architecture componentes using Spring Cloud Platform. (Netflix Eureka, Spring Cloud Config, Netlix Zuul ApiGateway)"
-    ]
-  }],
+      "name": "Microservices architecture improvement",
+      "to": "2019",
+      "workplace": "Promerica Financial Corporation TI",
+      "details": [
+        "Docker swarm clusters deployment automation using ANSIBLE."
+      ]
+    },
+    {
+      "name": "Microservices architecture implementation from zero",
+      "since": "2016",
+      "to": "2018",
+      "workplace": "Grupo Mutual",
+      "details": [
+        "Design and implement a microservices architecture patterns. (Event-driven, circuit breakers).",
+        "DevOps strategy for the deployment of Microservices using Docker containers.",
+        "Deploy a Docker Swarm cluster for container Orchestration in production.",
+        "Development of Core Microservices architecture componentes using Spring Cloud Platform. (Netflix Eureka, Spring Cloud Config, Netflix Zuul Api Gateway)"
+      ]
+    }
+  ],
   "education": [{
       "since": "2011",
       "to": "In-Progress",
@@ -155,7 +156,7 @@
       "Kotlin"
     ],
     "frameworks": [
-      "NodeJS",
+      "Node.js",
       "Spring Boot"
     ],
     "Other": [
