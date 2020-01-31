@@ -20,6 +20,9 @@ jobs:
         repository: arcezd/html-resume
         ref: 'v1.0.0'
         path: html
+    - name: Setting compilation vars
+        id: vars
+        run: echo ::set-output name=sha_short::$(git rev-parse --short HEAD)
     - name: Use Node.js
       uses: actions/setup-node@v1
       with:
@@ -31,12 +34,18 @@ jobs:
       run: npm run pdf
       env:
         HTML_TEMPLATE_SUBFOLDER: html/default
+        TAG_REF_V: ${{ github.ref }}
+        COMMIT_SHA: ${{ steps.vars.outputs.sha_short }}
+        GITHUB_REPO: ${{ github.repository }}
     - name: Run task.js for PDF generation [ES]
       id: pdf-generation-es
       run: npm run pdf
       env:
         HTML_TEMPLATE_SUBFOLDER: html/default
         RESUME_LANGUAGE: es
+        TAG_REF_V: ${{ github.ref }}
+        COMMIT_SHA: ${{ steps.vars.outputs.sha_short }}
+        GITHUB_REPO: ${{ github.repository }}
     - name: Create Release
       id: create_release
       uses: actions/create-release@v1.0.0
