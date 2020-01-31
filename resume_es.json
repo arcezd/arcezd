@@ -1,0 +1,177 @@
+{
+  "info": {
+    "firstname": "Diego",
+    "lastname": "Arce",
+    "secondSurname": "Espinoza",
+    "bio": [
+      "Desarrollador de Software Senior con más de 6 años de experiencia,",
+      "apasionado sobre las nuevas tecnologías",
+      "con especial interés en el gran potencial de las aplicaciones 'serverless',",
+      "principalmente por su bajo costo y alto nivel de escalabilidad"
+    ]
+  },
+  "contact": {
+    "website": {
+      "label": "diego.arce.cr",
+      "href": "https://diego.arce.cr"
+    },
+    "email": {
+      "label": "diego@arce.cr",
+      "href": "mailto:diego@arce.cr"
+    },
+    "skype": {
+      "label": "arcezd",
+      "href": "skype:arcezd"
+    },
+    "phoneNumber": {
+      "label": "(+506) 7016-0087",
+      "href": "tel:+506-70160087"
+    }
+  },
+  "socialMedia": {
+    "github": {
+      "label": "github.arce.cr",
+      "href": "http://github.arce.cr"
+    },
+    "linkedIn": {
+      "label": "linkedIn.arce.cr",
+      "href": "http://linkedIn.arce.cr"
+    },
+    "twitter": {
+      "label": "twitter.arce.cr",
+      "href": "http://twitter.arce.cr"
+    }
+  },
+  "experiences": [{
+      "position": "Desarrollador de Software",
+      "place": "Promerica Financial Corporation TI",
+      "location": "Heredia, CR",
+      "since": "2018",
+      "to": "ACTUALMENTE",
+      "details": [
+        "Desarrollo e implementación de microservicios utilizando tecnologías como Node.js, Kotlin y Java",
+        "Orquestación de contenedores utilizando Docker Swarm"
+      ]
+    },
+    {
+      "position": "Arquitecto de Software",
+      "place": "Grupo Mutual",
+      "location": "Alajuela, CR",
+      "since": "2016",
+      "to": "2018",
+      "details": [
+        "Desarrollo e implementación de microservicios utilizando tecnologías como Java, Spring Cloud, Netflix Zuul, Netflix Eureka y Spring Framework",
+        "Diseño y desarrollo de aplicaciones iOS. UX / UI para aplicaciones de banca digital"
+      ]
+    },
+    {
+      "position": "Soporte de Sistemas",
+      "place": "Grupo Mutual",
+      "location": "Alajuela, CR",
+      "since": "2015",
+      "to": "2016",
+      "details": [
+        "Análisis y resolución de bugs en el software de core bancario",
+        "Oracle Forms 11g , Oracle Reports 11g y Oracle PL / SQL (Procedures, Triggers, etc.)"
+      ]
+    },
+    {
+      "position": "Technical Support",
+      "place": "Grupo Mutual",
+      "location": "Alajuela, CR",
+      "since": "2013",
+      "to": "2014",
+      "details": [
+        "Instalación y mantenimiento del software y hardware para equipos Dell de usuarios finales",
+        "Mantenimiento de arquitectura de virtualización de escritorios utilizando Citrix Xen Desktop"
+      ]
+    }
+  ],
+  "projects": [{
+      "name": "Mejoras a la arquitectura de Microservicios",
+      "to": "2019",
+      "workplace": "Promerica Financial Corporation TI",
+      "details": [
+        "Automatización del despliegue de clusters Docker Swarm utilizando ANSIBLE"
+      ]
+    },
+    {
+      "name": "Implementación de una arquitectura de microservicios",
+      "since": "2016",
+      "to": "2018",
+      "workplace": "Grupo Mutual",
+      "details": [
+        "Diseño e implementación de patrones de arquitectura de microservicios (Basados en Event-driven, circuit breakers).",
+        "Implementación de una estrategia DevOps para el despliegue de microservicios utilizando contenedores Docker.",
+        "Despliegue del cluster Docker Swarm para la orquestación de contenedores en producción.",
+        "Desarrollo de componentes core para la arquitectura de microservicios utilizando 'Spring Cloud Platform'. (Netflix Eureka, Spring Cloud Config, Netflix Zuul Api Gateway)"
+      ]
+    }
+  ],
+  "education": [{
+      "since": "2011",
+      "to": "En-Proceso",
+      "title": "Bachiller de Ingeniería en Sistemas",
+      "place": "Universidad de las Ciencias Empresariales",
+      "location": "Alajuela, CR"
+    },
+    {
+      "since": "2007",
+      "to": "2009",
+      "title": "Técnico medio en Contabilidad con énfasis en Auditoría",
+      "place": "Colegio Técnico Profesional Jesús Ocaña Rojas",
+      "location": "Alajuela, CR"
+    },
+    {
+      "to": "2018",
+      "title": "CURSO | Desarrollo de aplicaciones iOS",
+      "place": "Babel Learning"
+    },
+    {
+      "to": "2017",
+      "title": "CURSO | Desarrollo de aplicaciones Android",
+      "place": "Babel Learning"
+    },
+    {
+      "to": "2017",
+      "title": "CURSO | Ethical Hacking",
+      "place": "ULACIT"
+    },
+    {
+      "to": "2017",
+      "title": "CURSO | Informática forense",
+      "place": "ULACIT"
+    },
+    {
+      "to": "2013",
+      "title": "CURSO | Desarrollo de aplicaciones iOS",
+      "place": "ULACIT"
+    }
+  ],
+  "contributions": {
+    "node-oracledb": {
+      "pr": [{
+        "id": 1190,
+        "url": "https://github.com/oracle/node-oracledb/pull/1190"
+      }]
+    }
+  },
+  "skills": {
+    "languages": [
+      "Javascript",
+      "Java",
+      "Swift",
+      "Kotlin"
+    ],
+    "frameworks": [
+      "Node.js",
+      "Spring Boot"
+    ],
+    "Other": [
+      "Docker",
+      "Docker Swarm",
+      "Kubernetes",
+      "AWS"
+    ]
+  }
+}
