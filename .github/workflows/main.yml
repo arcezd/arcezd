@@ -25,8 +25,17 @@ jobs:
         node-version: '10.x'
     - name: Install dependencies
       run: npm install
-    - name: Run task.js for PDF generation
+    - name: Run task.js for PDF generation [EN]
+      id: pdf-generation-en
       run: npm run pdf
+      env:
+        HTML_TEMPLATE_SUBFOLDER: html/default
+    - name: Run task.js for PDF generation [ES]
+      id: pdf-generation-es
+      run: npm run pdf
+      env:
+        HTML_TEMPLATE_SUBFOLDER: html/default
+        RESUME_LANGUAGE: es
     - name: Create Release
       id: create_release
       uses: actions/create-release@v1.0.0
@@ -37,19 +46,30 @@ jobs:
         release_name: Release ${{ github.ref }}
         draft: false
         prerelease: false
-    - name: Upload Resume JSON to S3 bucket
-      id: upload-release-asset-json-to-s3
+    - name: Upload Resume JSON to S3 bucket [EN]
+      id: upload-release-asset-json-en-to-s3
       uses: arcezd/s3-cp-action@v0.0.1
       env:
         AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        DEST_DIR: cv/api
+        DEST_DIR: cv/api/v1/en/resume.json
         SOURCE_DIR: resume_en.json
       with:
         args: --follow-symlinks
-    - name: Upload Resume PDF to assets
-      id: upload-release-asset-pdf
+    - name: Upload Resume JSON to S3 bucket [ES]
+      id: upload-release-asset-json-es-to-s3
+      uses: arcezd/s3-cp-action@v0.0.1
+      env:
+        AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        DEST_DIR: cv/api/v1/es/resume.json
+        SOURCE_DIR: resume_es.json
+      with:
+        args: --follow-symlinks
+    - name: Upload Resume PDF to assets [EN]
+      id: upload-release-asset-pdf-en
       uses: actions/upload-release-asset@v1.0.1
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -57,5 +77,15 @@ jobs:
         upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps 
         asset_path: ./diego.arce_resume_en.pdf
         asset_name: diego.arce_resume_en.pdf
+        asset_content_type: application/pdf
+    - name: Upload Resume PDF to assets [ES]
+      id: upload-release-asset-pdf-es
+      uses: actions/upload-release-asset@v1.0.1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps 
+        asset_path: ./diego.arce_resume_es.pdf
+        asset_name: diego.arce_resume_es.pdf
         asset_content_type: application/pdf
       
