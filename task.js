@@ -33,6 +33,7 @@ async function renderResumeHtml() {
         ...data,
         build: {
           tagRef: TAG_REF_V,
+          version: await extractVersionFromTagRef(TAG_REF_V),
           commitSha: COMMIT_SHA,
           repoUrl: GITHUB_REPO_URL
         }
@@ -44,6 +45,17 @@ async function renderResumeHtml() {
   } catch (err) {
     console.error(err);
     return Promise.reject(`Could not render resume template. Template path: ${resumeTemplatePath}. Data path: ${resumeTemplateData}`);
+  }
+}
+
+async function extractVersionFromTagRef(tagRef) {
+  try {
+    const rExp = /^\/([A-Z]+)\/([A-Z]+)\/(v([0-9]+)\.([0-9]+)\.([0-9]+)(?:\.[0-9]+)?)/gi;
+    const tagRefArray = rExp.exec(tagRef);
+    return tagRefArray[3];
+  } catch (err) {
+    console.error(err);
+    return null;
   }
 }
 
