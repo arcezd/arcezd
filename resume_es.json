@@ -150,12 +150,12 @@
     }
   ],
   "contributions": [{
-    "repo": "node-oracledb",
+    "repo": "oracle/node-oracledb",
     "url": "https://github.com/oracle/node-oracledb",
-    "lastPR": {
-      "id": 1190,
+    "links": [{
+      "label": "PR-1190",
       "url": "https://github.com/oracle/node-oracledb/pull/1190"
-    }
+    }]
   }],
   "skills": {
     "languages": [
