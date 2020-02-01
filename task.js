@@ -6,6 +6,8 @@ const fs = require('fs'),
   writeFile = utils.promisify(fs.writeFile),
   Mustache = require('mustache');
 
+require('dotenv').config();
+
 const HTML_TEMPLATE_SUBFOLDER = process.env.HTML_TEMPLATE_SUBFOLDER || 'default';
 const RESUME_LANGUAGE = process.env.RESUME_LANGUAGE || 'en';
 
