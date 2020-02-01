@@ -50,7 +50,7 @@ async function renderResumeHtml() {
 
 async function extractVersionFromTagRef(tagRef) {
   try {
-    const rExp = /^\/([A-Z]+)\/([A-Z]+)\/(v([0-9]+)\.([0-9]+)\.([0-9]+)(?:\.[0-9]+)?)/gi;
+    const rExp = /^([A-Z]+)\/([A-Z]+)\/(v([0-9]+)\.([0-9]+)\.([0-9]+)(?:\.[0-9]+)?)/gi;
     const tagRefArray = rExp.exec(tagRef);
     return tagRefArray[3];
   } catch (err) {
