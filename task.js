@@ -8,7 +8,7 @@ const fs = require('fs'),
 
 require('dotenv').config();
 
-const HTML_TEMPLATE_SUBFOLDER = process.env.HTML_TEMPLATE_SUBFOLDER || 'default';
+const HTML_TEMPLATE_SUBFOLDER = process.env.HTML_TEMPLATE_SUBFOLDER || 'html/default';
 const RESUME_LANGUAGE = process.env.RESUME_LANGUAGE || 'en';
 
 const TAG_REF_V = process.env.TAG_REF_V;
