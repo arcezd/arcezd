@@ -160,7 +160,9 @@
   "skills": {
     "languages": [
       "Javascript",
+      "Python",
       "Java",
+      "Dart",
       "Swift",
       "Kotlin"
     ],
