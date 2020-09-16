@@ -43,7 +43,7 @@ async function renderResumeHtml() {
     writeFile(resumeHtmlPath, generatedHtml);
     return
   } catch (err) {
-    console.error(err);
+    console.error(err.message);
     return Promise.reject(`Could not render resume template. Template path: ${resumeTemplatePath}. Data path: ${resumeTemplateData}`);
   }
 }
@@ -52,10 +52,11 @@ async function extractVersionFromTagRef(tagRef) {
   try {
     const rExp = /^([A-Z]+)\/([A-Z]+)\/(v([0-9]+)\.([0-9]+)\.([0-9]+)(?:\.[0-9]+)?)/gi;
     const tagRefArray = rExp.exec(tagRef);
+    if (!tagRefArray) throw new Error('Incorrect git Tag Ref. Expected to be format: \'refs/tags/v0.0.1\'');
     return tagRefArray[3];
   } catch (err) {
-    console.error(err);
-    return null;
+    console.error(err.message);
+    return tagRef;
   }
 }
 
