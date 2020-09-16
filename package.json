@@ -20,7 +20,7 @@
   "homepage": "https://github.com/ArcezD/resume#readme",
   "dependencies": {
     "dotenv": "^8.2.0",
-    "mustache": "^4.0.0",
-    "puppeteer": "^2.0.0"
+    "mustache": "^4.0.1",
+    "puppeteer": "^2.1.1"
   }
 }
