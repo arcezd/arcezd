@@ -4,12 +4,6 @@
 
 <div align="center">
   <h3> Diego Arce | :computer: Co-Founder & CTO <a href="https://bits.cr">@bits.cr</a> | Sr. Software Developer | Costa Rica 🇨🇷</h3>
-  <p>
-    <a target="_blank" href="mailto:diego@arce.cr">
-    <img alt="Email" src="https://img.shields.io/badge/diego@arce.cr-0078D4.svg?&style=flat&logo=Microsoft-Outlook&logoColor=white" /></a>
-    <a target="_blank" href="https://www.linkedin.com/in/arcezd/"><img alt="LinkedIn" src="https://img.shields.io/badge/arcezd-0077B5.svg?&style=flat&logo=linkedin&logoColor=white" /></a>
-    <a target="_blank" href="https://twitter.com/arcezd"><img alt="Twitter" src="https://img.shields.io/badge/@arcezd-1DA1F2.svg?&style=flat&logo=twitter&logoColor=white" /></a>
-  </p>
 </div>
 
 <ul>
@@ -17,9 +11,21 @@
   <li>:blue_book: Always learning something new</li>
 </ul>
 
+#### Feel free to reach me at:
+<p>
+  <a href="mailto:diego@arce.cr">
+    <img alt="Email" src="https://img.shields.io/badge/diego@arce.cr-0078D4.svg?&style=flat&logo=Microsoft-Outlook&logoColor=white" />
+  </a>
+  <a href="https://www.linkedin.com/in/arcezd/">
+    <img alt="LinkedIn" src="https://img.shields.io/badge/arcezd-0077B5.svg?&style=flat&logo=linkedin&logoColor=white" />
+  </a>
+  <a href="https://twitter.com/arcezd">
+    <img alt="Twitter" src="https://img.shields.io/badge/@arcezd-1DA1F2.svg?&style=flat&logo=twitter&logoColor=white" />
+  </a>
+</p>
+
 ---
 #### :satellite: My skills includes
-
 <p align="left">
   <img src="https://img.shields.io/badge/AWS%20-%23FF9900.svg?&style=for-the-badge&logo=amazon-aws&logoColor=white" alt="GitHub badge" />
   <img src="https://img.shields.io/badge/azure%20-%230072C6.svg?&style=for-the-badge&logo=azure-devops&logoColor=white" />
@@ -46,7 +52,6 @@
   <img src="https://img.shields.io/badge/-Raspberry%20Pi-C51A4A?style=for-the-badge&logo=Raspberry-Pi"/>
   <img src="https://img.shields.io/badge/-Arduino-00979D?style=for-the-badge&logo=Arduino&logoColor=white"/>
 </p>
-
 <p align="right">
   <a align="right target="_blank" href="https://www.youracclaim.com/badges/de82fb9f-7814-4519-b5c1-c2ba238c3ac7">
     <img src="https://images.youracclaim.com/size/680x680/images/2a15d440-edbe-44a2-890f-0a0caf7e1442/AWS-Developer-Associate.png" alt="AWS Certified Developer Associate" width="80" height="80" />
