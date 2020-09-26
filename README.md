@@ -3,7 +3,7 @@
 </div>
 
 <div align="center">
-  <h3> Diego Arce | :computer: Sr. DevOps Engineer | Costa Rica 🇨🇷</h3>
+  <h3> Diego Arce | :computer: Co-Founder & CTO <a href="https://bits.cr">@bits.cr</a> | Sr. Software Developer | Costa Rica 🇨🇷</h3>
   <p>
     <a target="_blank" href="mailto:diego@arce.cr">
     <img alt="Email" src="https://img.shields.io/badge/diego@arce.cr-0078D4.svg?&style=flat&logo=Microsoft-Outlook&logoColor=white" /></a>
@@ -16,6 +16,15 @@
   <li>:seedling: I'm a <b>developer</b>, <b>husband</b>, <b>father</b></li>
   <li>:blue_book: Always learning something new</li>
 </ul>
+
+<p align="right">
+  <a target="_blank" href="mailto:diego@arce.cr">
+    <img src="https://images.youracclaim.com/size/680x680/images/2a15d440-edbe-44a2-890f-0a0caf7e1442/AWS-Developer-Associate.png" alt="AWS Certified Developer Associate" width="80" height="80" />
+  </a>
+  <a target="_blank" href="mailto:diego@arce.cr">
+    <img src="https://images.youracclaim.com/size/680x680/images/6a254dad-77e5-4e71-8049-94e5c7a15981/azure-fundamentals-600x600.png" alt="Azure Fundamentals" width="80" height="80" />
+  </a>
+</p>
 
 ---
 #### :satellite: My skills includes
