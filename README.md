@@ -1,9 +1,9 @@
 <div align="center">
-   <h1>Hey there <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="25px">, nice to have you here</h1>
+   <h1>Hey there <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="25px">, I'm Diego Arce</h1>
 </div>
 
 <div align="center">
-  <h3> Diego Arce | :computer: Co-Founder & CTO <a href="https://bits.cr">@bits.cr</a> | Sr. Software Developer | Costa Rica 🇨🇷</h3>
+  <h3>Co-Founder & CTO <a href="https://bits.cr">@bits.cr</a> :briefcase: | :computer: Sr. Software Developer | Alajuela, CR 🇨🇷</h3>
 </div>
 
 <ul>
@@ -11,7 +11,7 @@
   <li>:blue_book: Always learning something new</li>
 </ul>
 
-#### :mailbox: Feel free to reach me at:
+#### :speech_balloon: Feel free to reach me at:
 <p>
   <a href="mailto:diego@arce.cr">
     <img alt="Email" src="https://img.shields.io/badge/diego@arce.cr-0078D4.svg?&style=for-the-badge&logo=Microsoft-Outlook&logoColor=white" />
