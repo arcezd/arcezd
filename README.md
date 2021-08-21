@@ -54,10 +54,10 @@
 </p>
 <p align="right">
   <a align="right target="_blank" href="https://www.youracclaim.com/badges/de82fb9f-7814-4519-b5c1-c2ba238c3ac7">
-    <img src="https://images.youracclaim.com/size/680x680/images/2a15d440-edbe-44a2-890f-0a0caf7e1442/AWS-Developer-Associate.png" alt="AWS Certified Developer Associate" width="80" height="80" />
+    <img src="https://github.com/ArcezD/arcezd/raw/master/assets/aws-dva.png" alt="AWS Certified Developer Associate" width="80" height="80" />
   </a>
   <a align="right target="_blank" href="https://www.youracclaim.com/badges/15438b2b-9e95-4c1c-9056-893c90f1a94a">
-    <img src="https://images.youracclaim.com/size/680x680/images/6a254dad-77e5-4e71-8049-94e5c7a15981/azure-fundamentals-600x600.png" alt="Azure Fundamentals" width="80" height="80" />
+    <img src="https://github.com/ArcezD/arcezd/raw/master/assets/azure-az900.png" alt="Azure Fundamentals" width="80" height="80" />
   </a>
 </p>
 
