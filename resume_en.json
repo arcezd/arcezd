@@ -183,12 +183,12 @@
   "badges": {
     "azure": [{
       "title": "Microsoft Certified: Azure Fundamentals",
-      "imgUrl": "https://images.youracclaim.com/size/680x680/images/6a254dad-77e5-4e71-8049-94e5c7a15981/azure-fundamentals-600x600.png",
+      "imgUrl": "https://github.com/ArcezD/arcezd/raw/master/assets/azure-az900.png",
       "url": "https://www.youracclaim.com/badges/15438b2b-9e95-4c1c-9056-893c90f1a94a"
     }],
     "aws": [{
       "title": "AWS Certified Developer – Associate",
-      "imgUrl": "https://images.youracclaim.com/size/680x680/images/2a15d440-edbe-44a2-890f-0a0caf7e1442/AWS-Developer-Associate.png",
+      "imgUrl": "https://github.com/ArcezD/arcezd/raw/master/assets/aws-dva.png",
       "url": "https://www.youracclaim.com/badges/de82fb9f-7814-4519-b5c1-c2ba238c3ac7"
     }]
   }
