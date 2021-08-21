@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ArcezD/resume.git"
+    "url": "git+https://github.com/arcezd/arcezd.git"
   },
-  "author": "Diego Arce <Diego@arce.cr> (https://github.com/ArcezD)",
+  "author": "Diego Arce <Diego@arce.cr> (https://github.com/arcezd)",
   "license": "UNLICENSED",
   "bugs": {
-    "url": "https://github.com/ArcezD/resume/issues"
+    "url": "https://github.com/arcezd/arcezd/issues"
   },
-  "homepage": "https://github.com/ArcezD/resume#readme",
+  "homepage": "https://github.com/arcezd/arcezd#readme",
   "dependencies": {
     "dotenv": "^10.0.0",
     "mustache": "^4.0.1",
