@@ -18,7 +18,7 @@ jobs:
       uses: actions/checkout@v2
       with:
         repository: arcezd/html-resume
-        ref: 'v1.0.8'
+        ref: 'v1.0.9'
         path: html
     - name: Setting compilation vars
       id: vars
