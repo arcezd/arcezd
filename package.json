@@ -19,8 +19,8 @@
   },
   "homepage": "https://github.com/ArcezD/resume#readme",
   "dependencies": {
-    "dotenv": "^8.2.0",
+    "dotenv": "^10.0.0",
     "mustache": "^4.0.1",
-    "puppeteer": "^2.1.1"
+    "puppeteer": "^10.2.0"
   }
 }
