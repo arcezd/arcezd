@@ -4,7 +4,7 @@ const fs = require('fs'),
   puppeteer = require('puppeteer'),
   readFile = utils.promisify(fs.readFile),
   writeFile = utils.promisify(fs.writeFile),
-  Mustache = require('mustache');
+  Handlebars = require('handlebars');
 
 require('dotenv').config();
 
@@ -24,7 +24,7 @@ const resumePdfPath = path.join(__dirname, `diego.arce_resume_${RESUME_LANGUAGE}
 async function renderResumeHtml() {
   try {
     console.log(`Loading template file in memory.`);
-    const template = await readFile(resumeTemplatePath, 'utf8');
+    const templateSrc = await readFile(resumeTemplatePath, 'utf8');
     const dataStr = await readFile(resumeTemplateData, 'utf8');
     let data = JSON.parse(dataStr);
     // Load compilation data
@@ -39,7 +39,9 @@ async function renderResumeHtml() {
         }
       }
     }
-    const generatedHtml = Mustache.render(template, data);
+    const template = Handlebars.compile(templateSrc);
+    const generatedHtml = template(data);
+
     writeFile(resumeHtmlPath, generatedHtml);
     return
   } catch (err) {

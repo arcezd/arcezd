@@ -20,7 +20,7 @@
   "homepage": "https://github.com/arcezd/arcezd#readme",
   "dependencies": {
     "dotenv": "^10.0.0",
-    "mustache": "^4.0.1",
+    "handlebars": "^4.7.7",
     "puppeteer": "^10.2.0"
   }
 }
