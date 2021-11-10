@@ -53,10 +53,10 @@
   <img src="https://img.shields.io/badge/-Arduino-00979D?style=for-the-badge&logo=Arduino&logoColor=white"/>
 </p>
 <p align="right">
-  <a align="right target="_blank" href="https://www.youracclaim.com/badges/de82fb9f-7814-4519-b5c1-c2ba238c3ac7">
+  <a align="right target="_blank" href="https://www.credly.com/badges/de82fb9f-7814-4519-b5c1-c2ba238c3ac7">
     <img src="https://github.com/ArcezD/arcezd/raw/master/assets/aws-dva.png" alt="AWS Certified Developer Associate" width="80" height="80" />
   </a>
-  <a align="right target="_blank" href="https://www.youracclaim.com/badges/15438b2b-9e95-4c1c-9056-893c90f1a94a">
+  <a align="right target="_blank" href="https://www.credly.com/badges/15438b2b-9e95-4c1c-9056-893c90f1a94a">
     <img src="https://github.com/ArcezD/arcezd/raw/master/assets/azure-az900.png" alt="Azure Fundamentals" width="80" height="80" />
   </a>
 </p>
