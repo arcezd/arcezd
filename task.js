@@ -1,10 +1,10 @@
 const fs = require('fs'),
   path = require('path'),
-  utils = require('util'),
   puppeteer = require('puppeteer'),
+  Handlebars = require('handlebars'),
+  utils = require('util'),
   readFile = utils.promisify(fs.readFile),
-  writeFile = utils.promisify(fs.writeFile),
-  Handlebars = require('handlebars');
+  writeFile = utils.promisify(fs.writeFile);
 
 require('dotenv').config();
 
@@ -15,7 +15,8 @@ const TAG_REF_V = process.env.TAG_REF_V;
 const COMMIT_SHA = process.env.COMMIT_SHA;
 const GITHUB_REPO_URL = `https://github.com/${process.env.GITHUB_REPO}`;
 
-const resumeTemplatePath = path.join(__dirname, HTML_TEMPLATE_SUBFOLDER, `resume_${RESUME_LANGUAGE}.html`);
+const resumeTemplatePath = path.join(__dirname, HTML_TEMPLATE_SUBFOLDER, `resume.html`);
+const resumeLangTemplateJSONPath = path.join(__dirname, HTML_TEMPLATE_SUBFOLDER, 'lang', `${RESUME_LANGUAGE}.json`);
 const resumeTemplateData = path.join(__dirname, `resume_${RESUME_LANGUAGE}.json`);
 const resumeHtmlPath = path.join(__dirname, HTML_TEMPLATE_SUBFOLDER, `diego.arce_resume_${RESUME_LANGUAGE}.html`);
 const resumePdfPath = path.join(__dirname, `diego.arce_resume_${RESUME_LANGUAGE}.pdf`);
@@ -25,7 +26,9 @@ async function renderResumeHtml() {
   try {
     console.log(`Loading template file in memory.`);
     const templateSrc = await readFile(resumeTemplatePath, 'utf8');
+    const langTemplateJsonStr = await readFile(resumeLangTemplateJSONPath, 'utf8');
     const dataStr = await readFile(resumeTemplateData, 'utf8');
+    const templateLang = JSON.parse(langTemplateJsonStr);
     let data = JSON.parse(dataStr);
     // Load compilation data
     if (TAG_REF_V && COMMIT_SHA && GITHUB_REPO_URL) {
@@ -39,14 +42,21 @@ async function renderResumeHtml() {
         }
       }
     }
+
+    Handlebars.registerHelper('i18n', function (value) {
+      if (templateLang[value]) return templateLang[value];
+      else console.error(`Error mapping template 'i18n' variable for value: ${value}.`);
+    });
+
     const template = Handlebars.compile(templateSrc);
+
     const generatedHtml = template(data);
 
     writeFile(resumeHtmlPath, generatedHtml);
     return
   } catch (err) {
     console.error(err.message);
-    return Promise.reject(`Could not render resume template. Template path: ${resumeTemplatePath}. Data path: ${resumeTemplateData}`);
+    return Promise.reject(`Could not render resume template. Template path: ${resumeTemplatePath}. Lang data path: ${resumeLangTemplateJSONPath}. Data path: ${resumeTemplateData}`);
   }
 }
 
