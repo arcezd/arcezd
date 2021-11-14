@@ -5,10 +5,10 @@
     "secondSurname": "Espinoza",
     "birthdate": "1991-11-24T08:43:00Z",
     "bio": [
+      "AWS Certified Developer Asociate | Certified Kubernetes Administrator",
       "Desarrollador de Software Senior con más de 6 años de experiencia,",
       "apasionado por las nuevas tecnologías,",
-      "buscando cambiar el mundo con algo de código binario.",
-      "AWS Certified Developer Asociate."
+      "buscando cambiar el mundo con algo de código binario."
     ]
   },
   "contact": {
@@ -43,12 +43,25 @@
       "href": "http://twitter.arce.cr"
     }
   },
-  "experience": [{
+  "experience": [
+    {
+      "position": "Arquitecto de Soluciones",
+      "place": "Promerica Financial Corporation TI",
+      "location": "Heredia, CR",
+      "since": "2021",
+      "to": "PRESENT",
+      "details": [
+        "Definición e implementación de diferentes arquitecturas cloud utilizando herramientas como Ansible y Terraform",
+        "Evaluación de diferentes soluciones para asegurar el cumplimiento de los estándares empresariales y del negocio",
+        "Colaborar con los equipos de desarrollo del grupo financiero en el logro de metas"
+      ]
+    },
+    {
       "position": "Desarrollador de Software",
       "place": "Promerica Financial Corporation TI",
       "location": "Heredia, CR",
       "since": "2018",
-      "to": "ACTUAL",
+      "to": "2021",
       "details": [
         "Desarrollo e implementación de microservicios utilizando tecnologías como Node.js, Kotlin y Java",
         "Orquestación de contenedores utilizando Docker Swarm"
@@ -82,13 +95,11 @@
       "location": "Alajuela, CR",
       "since": "2013",
       "to": "2014",
-      "details": [
-        "Instalación y mantenimiento del software y hardware para equipos Dell de usuarios finales",
-        "Mantenimiento de arquitectura de virtualización de escritorios utilizando Citrix Xen Desktop"
-      ]
+      "details": []
     }
   ],
-  "projects": [{
+  "projects": [
+    {
       "name": "Mejoras a la arquitectura de Microservicios",
       "to": "2019",
       "workplace": "Promerica Financial Corporation TI",
@@ -109,18 +120,12 @@
       ]
     }
   ],
-  "education": [{
+  "education": [
+    {
       "since": "2011",
       "to": "En-Proceso",
       "title": "Bachiller de Ingeniería en Sistemas",
       "place": "Universidad de las Ciencias Empresariales",
-      "location": "Alajuela, CR"
-    },
-    {
-      "since": "2007",
-      "to": "2009",
-      "title": "Técnico medio en Contabilidad con énfasis en Auditoría",
-      "place": "Colegio Técnico Profesional Jesús Ocaña Rojas",
       "location": "Alajuela, CR"
     },
     {
@@ -142,21 +147,20 @@
       "to": "2017",
       "title": "CURSO | Informática forense",
       "place": "ULACIT"
-    },
-    {
-      "to": "2013",
-      "title": "CURSO | Desarrollo de aplicaciones iOS",
-      "place": "ULACIT"
     }
   ],
-  "contributions": [{
-    "repo": "oracle/node-oracledb",
-    "url": "https://github.com/oracle/node-oracledb",
-    "links": [{
-      "label": "PR-1190",
-      "url": "https://github.com/oracle/node-oracledb/pull/1190"
-    }]
-  }],
+  "contributions": [
+    {
+      "repo": "oracle/node-oracledb",
+      "url": "https://github.com/oracle/node-oracledb",
+      "links": [
+        {
+          "label": "PR-1190",
+          "url": "https://github.com/oracle/node-oracledb/pull/1190"
+        }
+      ]
+    }
+  ],
   "skills": {
     "languages": [
       "Javascript",
@@ -181,15 +185,26 @@
     ]
   },
   "badges": {
-    "azure": [{
-      "title": "Microsoft Certified: Azure Fundamentals",
-      "imgUrl": "https://github.com/ArcezD/arcezd/raw/master/assets/azure-az900.png",
-      "url": "https://www.youracclaim.com/badges/15438b2b-9e95-4c1c-9056-893c90f1a94a"
-    }],
-    "aws": [{
-      "title": "AWS Certified Developer – Associate",
-      "imgUrl": "https://github.com/ArcezD/arcezd/raw/master/assets/aws-dva.png",
-      "url": "https://www.youracclaim.com/badges/de82fb9f-7814-4519-b5c1-c2ba238c3ac7"
-    }]
+    "azure": [
+      {
+        "title": "Microsoft Certified: Azure Fundamentals",
+        "imgUrl": "https://github.com/ArcezD/arcezd/raw/main/assets/azure-az900.png",
+        "url": "https://www.credly.com/badges/b6414e9d-03ed-403e-8650-2f9231e10bb1"
+      }
+    ],
+    "aws": [
+      {
+        "title": "AWS Certified Developer – Associate",
+        "imgUrl": "https://github.com/ArcezD/arcezd/raw/main/assets/aws-dva.png",
+        "url": "https://www.credly.com/badges/de82fb9f-7814-4519-b5c1-c2ba238c3ac7"
+      }
+    ],
+    "linuxfoundation": [
+      {
+        "title": "Certified Kubernetes Administrator",
+        "imgUrl": "https://github.com/ArcezD/arcezd/raw/main/assets/cnf-cka.png",
+        "url": "https://www.credly.com/badges/b6414e9d-03ed-403e-8650-2f9231e10bb1"
+      }
+    ]
   }
 }
