@@ -3,7 +3,7 @@
 </div>
 
 <div align="center">
-  <h3>Co-Founder & CTO <a href="https://bits.cr">@bits.cr</a> :briefcase: | :computer: Sr. Software Developer | Alajuela, CR 🇨🇷</h3>
+  <h3>Co-Founder & CTO <a href="https://bits.cr">@bits.cr</a> :briefcase: | :computer: Cloud Solutions Architect <a href="https://www.grupopromerica.com">@GrupoPromerica</a> | Alajuela, CR 🇨🇷</h3>
 </div>
 
 <ul>
