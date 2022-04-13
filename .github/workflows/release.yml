@@ -2,40 +2,68 @@ name: Create new resume release
 
 on:
   push:
-    # Sequence of patterns matched against refs/tags
-    tags:
-    - 'v*' # Push events to matching v*, i.e. v1.0, v20.15.10
+    branches:
+    - 'main'
+    - 'beta'
 
 jobs:
-  build:
+  release:
 
     runs-on: ubuntu-latest
 
     steps:
     - name: Checkout repo
-      uses: actions/checkout@v2
+      id: checkout
+      uses: actions/checkout@v3
     - name: Checkout html-resume repo
-      uses: actions/checkout@v2
+      id: checkout-html
+      uses: actions/checkout@v3
       with:
         repository: arcezd/html-resume
-        ref: 'v1.1.0'
+        ref: 'v1.2.0'
         path: html
     - name: Setting compilation vars
-      id: vars
+      id: compilation-vars
       run: echo ::set-output name=sha_short::$(git rev-parse --short HEAD)
-    - name: Use Node.js
-      uses: actions/setup-node@v1
+    - name: Setup node
+      id: setup-node
+      uses: actions/setup-node@v3
       with:
         node-version: '14.x'
     - name: Install dependencies
-      run: npm install
+      id: install-dependencies
+      run: yarn install --frozen-lockfile
+    - name: Import GPG key for bot
+      id: bot-signing-key
+      uses: crazy-max/ghaction-import-gpg@v4
+      with:
+        gpg_private_key: ${{ secrets.BOT_GPG_SIGNING_KEY }}
+        passphrase: ${{ secrets.BOT_GPG_PASSPHRASE }}
+        fingerprint: "F0637CD9BCDAACC51D7976F3071E232FF33B2800"
+    - name: Prepare git user for bot
+      run: |
+        git config --global user.name "arcezd's bot"
+        git config --global user.email "bot@arce.cr"
+        git config --global user.signingkey $KEY_ID
+        git config --global commit.gpgsign true
+      env:
+        KEY_ID: ${{ steps.bot-signing-key.outputs.keyid }}
+    - name: Create new version
+      run: |
+        yarn config set version-git-tag true
+        yarn version --patch
+    - name: Get version number
+      id: tag-vars
+      run: | 
+        echo ::set-output name=version::$(sed -En 's|.*"version".+"(([0-9]+\.[0-9]+\.[0-9]+))".*|\1|p' package.json)
+        echo ::set-output name=git-tag::$(sed -En 's|.*"version".+"(([0-9]+\.[0-9]+\.[0-9]+))".*|refs/tags/v\1|p' package.json)
     - name: Run task.js for PDF generation [EN]
       id: pdf-generation-en
       run: npm run pdf
       env:
         HTML_TEMPLATE_SUBFOLDER: html/default
         TAG_REF_V: ${{ github.ref }}
-        COMMIT_SHA: ${{ steps.vars.outputs.sha_short }}
+        COMMIT_SHA: ${{ steps.compilation-vars.outputs.sha_short }}
         GITHUB_REPO: ${{ github.repository }}
     - name: Run task.js for PDF generation [ES]
       id: pdf-generation-es
@@ -44,18 +72,8 @@ jobs:
         HTML_TEMPLATE_SUBFOLDER: html/default
         RESUME_LANGUAGE: es
         TAG_REF_V: ${{ github.ref }}
-        COMMIT_SHA: ${{ steps.vars.outputs.sha_short }}
+        COMMIT_SHA: ${{ steps.compilation-vars.outputs.sha_short }}
         GITHUB_REPO: ${{ github.repository }}
-    - name: Create Release
-      id: create_release
-      uses: actions/create-release@v1.0.0
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        tag_name: ${{ github.ref }}
-        release_name: Release ${{ github.ref }}
-        draft: false
-        prerelease: false
     - name: Upload Resume JSON to S3 bucket [EN]
       id: upload-release-asset-json-en-to-s3
       uses: arcezd/s3-cp-action@v0.0.1
@@ -80,34 +98,26 @@ jobs:
         args: --follow-symlinks
     - name: Upload resume PDF to artifacts [EN]
       id: upload-pdf-artifact-en
-      uses: actions/upload-artifact@v1
+      uses: actions/upload-artifact@v3
       with:
         name: diego.arce_resume_en.pdf
         path: diego.arce_resume_en.pdf
     - name: Upload resume PDF to artifacts [ES]
       id: upload-pdf-artifact-es
-      uses: actions/upload-artifact@v1
+      uses: actions/upload-artifact@v3
       with:
         name: diego.arce_resume_es.pdf
         path: diego.arce_resume_es.pdf
-    - name: Upload Resume PDF to assets [EN]
-      id: upload-release-asset-pdf-en
-      uses: actions/upload-release-asset@v1.0.1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: Push changes and release tag
+      id: git-push
+      run: |
+        git push origin
+        git push origin --tags
+    - name: Create Github.com release
+      uses: softprops/action-gh-release@v1
       with:
-        upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps 
-        asset_path: ./diego.arce_resume_en.pdf
-        asset_name: diego.arce_resume_en.pdf
-        asset_content_type: application/pdf
-    - name: Upload Resume PDF to assets [ES]
-      id: upload-release-asset-pdf-es
-      uses: actions/upload-release-asset@v1.0.1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps 
-        asset_path: ./diego.arce_resume_es.pdf
-        asset_name: diego.arce_resume_es.pdf
-        asset_content_type: application/pdf
-      
+        name: Release ${{ steps.tag-vars.outputs.version }}
+        tag_name: ${{ steps.tag-vars.outputs.git-tag }}
+        files: |
+          diego.arce_resume_en.pdf
+          diego.arce_resume_es.pdf
