@@ -1,6 +1,6 @@
 {
   "name": "resume-arcezd",
-  "version": "0.0.1",
+  "version": "1.1.0",
   "description": "Task for html to PDF",
   "main": "task.js",
   "scripts": {
