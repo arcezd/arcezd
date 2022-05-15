@@ -42,7 +42,7 @@ jobs:
         fingerprint: "F0637CD9BCDAACC51D7976F3071E232FF33B2800"
     - name: Prepare git user for bot
       run: |
-        git config --global user.name "arcezd's bot"
+        git config --global user.name "arce-bot"
         git config --global user.email "bot@arce.cr"
         git config --global user.signingkey $KEY_ID
         git config --global commit.gpgsign true
@@ -62,7 +62,7 @@ jobs:
       run: npm run pdf
       env:
         HTML_TEMPLATE_SUBFOLDER: html/default
-        TAG_REF_V: ${{ github.ref }}
+        TAG_REF_V: ${{ steps.tag-vars.outputs.git-tag }}
         COMMIT_SHA: ${{ steps.compilation-vars.outputs.sha_short }}
         GITHUB_REPO: ${{ github.repository }}
     - name: Run task.js for PDF generation [ES]
