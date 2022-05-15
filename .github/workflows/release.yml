@@ -71,7 +71,7 @@ jobs:
       env:
         HTML_TEMPLATE_SUBFOLDER: html/default
         RESUME_LANGUAGE: es
-        TAG_REF_V: ${{ github.ref }}
+        TAG_REF_V: ${{ steps.tag-vars.outputs.git-tag }}
         COMMIT_SHA: ${{ steps.compilation-vars.outputs.sha_short }}
         GITHUB_REPO: ${{ github.repository }}
     - name: Upload Resume JSON to S3 bucket [EN]
