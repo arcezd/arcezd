@@ -52,9 +52,9 @@
 
 #### :space_invader: Cool and fun skills
 <p align="left">
-  <img src="https://img.shields.io/badge/-Drone%20Pilot-848482?style=for-the-badge&logo=Drone&logoColor=white"/>
-  <img src="https://img.shields.io/badge/-Raspberry%20Pi-C51A4A?style=for-the-badge&logo=Raspberry-Pi"/>
-  <img src="https://img.shields.io/badge/-Arduino-00979D?style=for-the-badge&logo=Arduino&logoColor=white"/>
+  <a href="https://www.instagram.com/arcezd/" target="_blank"><img src="https://img.shields.io/badge/-Drone%20Pilot-848482?style=for-the-badge&logo=Drone&logoColor=white"/></a>
+  <a href="https://www.raspberrypi.org/" target="_blank"><img src="https://img.shields.io/badge/-Raspberry%20Pi-C51A4A?style=for-the-badge&logo=Raspberry-Pi"/>
+  <a href="https://www.arduino.cc/" target="_blank"><img src="https://img.shields.io/badge/-Arduino-00979D?style=for-the-badge&logo=Arduino&logoColor=white"/></a>
 </p>
 <p align="right">
   <a align="right target="_blank" href="https://www.credly.com/badges/b6414e9d-03ed-403e-8650-2f9231e10bb1">
