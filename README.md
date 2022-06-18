@@ -1,9 +1,10 @@
 <div align="center">
-   <h1>Hey there <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="25px">, I'm Diego Arce</h1>
+   <h1>Hey there <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="25" height="25">, I'm Diego Arce</h1>
 </div>
 
-<div align="center">
-  <h3>Co-Founder & CTO <a href="https://bits.cr">@bits.cr</a> :briefcase: | :computer: Cloud Solutions Architect <a href="https://www.grupopromerica.com">@GrupoPromerica</a> | Alajuela, CR 🇨🇷</h3>
+<div align="center" stype="white-space: pre">
+  <h3>:computer: Cloud Solutions Architect <a href="https://www.grupopromerica.com">@GrupoPromerica</a> | Co-Founder & CTO <a href="https://bits.cr">@bits.cr</a></h3>
+  <h3>:briefcase: | Alajuela, Costa Rica 🇨🇷</h3>
 </div>
 
 <ul>
