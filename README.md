@@ -70,7 +70,10 @@
 
 ---
 <p align="right">
-  <a href="https://github.com/arcezd/arcezd/commits/main" target="_blank">
-    <img alt="Blog" src="https://img.shields.io/github/last-commit/arcezd/arcezd?color=blue&logo=GitHub" />
+  <a href="https://github.com/arcezd/arcezd/releases/latest">
+    <img alt="last release" src="https://img.shields.io/github/v/release/arcezd/arcezd?logo=GitHub"/>
+  </a>
+  <a href="https://github.com/arcezd/arcezd/commits/main">
+    <img alt="last commit" src="https://img.shields.io/github/last-commit/arcezd/arcezd?color=blue"/>
   </a>
 </p>
