@@ -52,18 +52,18 @@
 
 #### :space_invader: Cool and fun skills
 <p align="left">
-  <a href="https://www.instagram.com/arcezd/" target="_blank"><img src="https://img.shields.io/badge/-Drone%20Pilot-848482?style=for-the-badge&logo=Drone&logoColor=white"/></a>
-  <a href="https://www.raspberrypi.org/" target="_blank"><img src="https://img.shields.io/badge/-Raspberry%20Pi-C51A4A?style=for-the-badge&logo=Raspberry-Pi"/>
-  <a href="https://www.arduino.cc/" target="_blank"><img src="https://img.shields.io/badge/-Arduino-00979D?style=for-the-badge&logo=Arduino&logoColor=white"/></a>
+  <a href="https://www.instagram.com/arcezd/"><img src="https://img.shields.io/badge/-Drone%20Pilot-848482?style=for-the-badge&logo=Drone&logoColor=white"/></a>
+  <a href="https://www.raspberrypi.org/"><img src="https://img.shields.io/badge/-Raspberry%20Pi-C51A4A?style=for-the-badge&logo=Raspberry-Pi"/>
+  <a href="https://www.arduino.cc/"><img src="https://img.shields.io/badge/-Arduino-00979D?style=for-the-badge&logo=Arduino&logoColor=white"/></a>
 </p>
 <p align="right">
-  <a align="right target="_blank" href="https://www.credly.com/badges/b6414e9d-03ed-403e-8650-2f9231e10bb1">
+  <a align="right" href="https://www.credly.com/badges/b6414e9d-03ed-403e-8650-2f9231e10bb1">
     <img src="https://github.com/arcezd/arcezd/raw/main/assets/cnf-cka.png" alt="Certified Kubernetes Administrator" width="80" height="80" />
   </a>
-  <a align="right target="_blank" href="https://www.credly.com/badges/de82fb9f-7814-4519-b5c1-c2ba238c3ac7">
+  <a align="right" href="https://www.credly.com/badges/de82fb9f-7814-4519-b5c1-c2ba238c3ac7">
     <img src="https://github.com/arcezd/arcezd/raw/main/assets/aws-dva.png" alt="AWS Certified Developer Associate" width="80" height="80" />
   </a>
-  <a align="right target="_blank" href="https://www.credly.com/badges/15438b2b-9e95-4c1c-9056-893c90f1a94a">
+  <a align="right" href="https://www.credly.com/badges/15438b2b-9e95-4c1c-9056-893c90f1a94a">
     <img src="https://github.com/arcezd/arcezd/raw/main/assets/azure-az900.png" alt="Azure Fundamentals" width="80" height="80" />
   </a>
 </p>
