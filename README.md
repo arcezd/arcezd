@@ -2,10 +2,9 @@
    <h1>Hey there <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="25" height="25">, I'm Diego Arce</h1>
 </div>
 
-<div align="center" stype="white-space: pre">
+<div align="center">
   <h3>:computer: Cloud Solutions Architect <a href="https://www.grupopromerica.com">@GrupoPromerica</a> | :briefcase: Co-Founder & CTO <a href="https://bits.cr">@bits.cr</a></h3>
-  </br>
-  <h3>Alajuela, Costa Rica 🇨🇷</h3>
+  <h3 style="color: gray; font-size: 20px;">Alajuela, Costa Rica 🇨🇷</h3>
 </div>
 
 <ul>
