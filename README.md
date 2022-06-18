@@ -4,12 +4,12 @@
 
 <div align="center">
   <h3>:computer: Cloud Solutions Architect <a href="https://www.grupopromerica.com">@GrupoPromerica</a> | :briefcase: Co-Founder & CTO <a href="https://bits.cr">@bits.cr</a></h3>
-  <h3 style="color: gray; font-size: 20px;">Alajuela, Costa Rica 🇨🇷</h3>
 </div>
 
 <ul>
   <li>:seedling: I'm a <b>developer</b>, <b>husband</b> :couple:, <b>father</b> :princess:</li>
   <li>:blue_book: Always learning something new</li>
+  <li>🇨🇷 Pura vida!</li>
 </ul>
 
 #### :speech_balloon: Feel free to reach me at:
