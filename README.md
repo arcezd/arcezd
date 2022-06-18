@@ -3,8 +3,9 @@
 </div>
 
 <div align="center" stype="white-space: pre">
-  <h3>:computer: Cloud Solutions Architect <a href="https://www.grupopromerica.com">@GrupoPromerica</a> | Co-Founder & CTO <a href="https://bits.cr">@bits.cr</a></h3>
-  <h3>:briefcase: | Alajuela, Costa Rica 🇨🇷</h3>
+  <h3>:computer: Cloud Solutions Architect <a href="https://www.grupopromerica.com">@GrupoPromerica</a> | :briefcase: Co-Founder & CTO <a href="https://bits.cr">@bits.cr</a></h3>
+  </br>
+  <h3>Alajuela, Costa Rica 🇨🇷</h3>
 </div>
 
 <ul>
