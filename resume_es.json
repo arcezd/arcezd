@@ -5,7 +5,8 @@
     "secondSurname": "Espinoza",
     "birthdate": "1991-11-24T08:43:00Z",
     "bio": [
-      "AWS Certified Developer Asociate | Certified Kubernetes Administrator",
+      "AWS Certified (Solutions Architect | Developer) Asociate",
+      "Certified Kubernetes Administrator",
       "Arquitecto de Soluciones Cloud con más de 6 años de experiencia,",
       "apasionado por las nuevas tecnologías,",
       "buscando cambiar el mundo con algo de código binario."
@@ -163,6 +164,7 @@
   ],
   "skills": {
     "languages": [
+      "Go",
       "Javascript",
       "Python",
       "Java",
@@ -194,7 +196,12 @@
     ],
     "aws": [
       {
-        "title": "AWS Certified Developer – Associate",
+        "title": "AWS Certified Solutions Architect - Associate",
+        "imgUrl": "https://github.com/arcezd/arcezd/raw/main/assets/aws-saa.png",
+        "url": "https://www.credly.com/badges/caa2c571-7d28-42a8-beeb-cce1e453a5bf/public_url"
+      },
+      {
+        "title": "AWS Certified Developer - Associate",
         "imgUrl": "https://github.com/ArcezD/arcezd/raw/main/assets/aws-dva.png",
         "url": "https://www.credly.com/badges/de82fb9f-7814-4519-b5c1-c2ba238c3ac7/public_url"
       }
