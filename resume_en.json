@@ -5,10 +5,11 @@
     "secondSurname": "Espinoza",
     "birthdate": "1991-11-24T08:43:00Z",
     "bio": [
-      "AWS Certified Developer Asociate | Certified Kubernetes Administrator",
       "Cloud Solutions Architect with 6+ years of industry experience,",
       "passionate about new technologies,",
-      "looking to change the world with some binary code."
+      "looking to change the world with some binary code.",
+      "AWS Certified Solutions Architect | Developer) Asociate",
+      "Certified Kubernetes Administrator"
     ]
   },
   "contact": {
