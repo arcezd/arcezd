@@ -64,8 +64,8 @@
       "since": "2021",
       "to": "2022",
       "details": [
-        "Definición e implementación de diferentes arquitecturas cloud utilizando herramientas como Ansible y Terraform",
-        "Evaluación de diferentes soluciones para asegurar el cumplimiento de los estándares empresariales y del negocio",
+        "Definición e implementación de arquitecturas cloud con herramientas como Ansible y Terraform",
+        "Evaluación de soluciones asegurando el cumplimiento de los estándares empresariales y del negocio",
         "Colaborar con los equipos de desarrollo del grupo financiero en el logro de metas"
       ]
     },
@@ -126,10 +126,10 @@
       "to": "2018",
       "workplace": "Grupo Mutual",
       "details": [
-        "Diseño e implementación de patrones de arquitectura de microservicios (Basados en Event-driven, circuit breakers).",
-        "Implementación de una estrategia DevOps para el despliegue de microservicios utilizando contenedores Docker.",
+        "Diseño e implementación de patrones de arquitectura de microservicios (Event-driven, circuit breakers, entre otros)",
+        "Implementación de una estrategia DevOps para el despliegue de los microservicios",
         "Despliegue del cluster Docker Swarm para la orquestación de contenedores en producción.",
-        "Desarrollo de componentes core para la arquitectura de microservicios utilizando 'Spring Cloud Platform'. (Netflix Eureka, Spring Cloud Config, Netflix Zuul Api Gateway)"
+        "Desarrollo de los componentes core para la arquitectura de microservicios."
       ]
     }
   ],
