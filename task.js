@@ -31,6 +31,9 @@ async function renderResumeHtml() {
     const templateLang = JSON.parse(langTemplateJsonStr);
     let data = JSON.parse(dataStr);
 
+    // Keep only the last 5 jobs experience
+    data.experience = data.experience.slice(0, 5);
+
     // Remove contributions for new resumes
     data.contributions = [];
 
