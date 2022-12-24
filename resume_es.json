@@ -5,7 +5,7 @@
     "secondSurname": "Espinoza",
     "birthdate": "1991-11-24T08:43:00Z",
     "bio": [
-      "AWS Certified (Solutions Architect | Developer) Asociate",
+      "AWS Certified (Solutions Architect | Developer | SysOps) Associate",
       "Certified Kubernetes Administrator",
       "Arquitecto de Soluciones Cloud con más de 6 años de experiencia,",
       "apasionado por las nuevas tecnologías,",
@@ -204,6 +204,11 @@
         "title": "AWS Certified Developer - Associate",
         "imgUrl": "https://github.com/ArcezD/arcezd/raw/main/assets/aws-dva.png",
         "url": "https://www.credly.com/badges/de82fb9f-7814-4519-b5c1-c2ba238c3ac7/public_url"
+      },
+      {
+        "title": "AWS Certified SysOps Administrator – Associate",
+        "imgUrl": "https://github.com/arcezd/arcezd/raw/main/assets/aws-soa.png",
+        "url": "https://www.credly.com/badges/cbfd3f3c-e1ae-4c2c-b823-51a766a3240a/public_url"
       }
     ],
     "linuxfoundation": [
