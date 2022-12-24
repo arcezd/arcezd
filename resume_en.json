@@ -8,7 +8,7 @@
       "Cloud Solutions Architect with 6+ years of industry experience,",
       "passionate about new technologies,",
       "looking to change the world with some binary code.",
-      "AWS Certified Solutions Architect | Developer) Asociate",
+      "AWS Certified (Solutions Architect | Developer | SysOps) Associate",
       "Certified Kubernetes Administrator"
     ]
   },
@@ -46,11 +46,23 @@
   },
   "experience": [
     {
+      "position": "Site Reliability Engineer",
+      "place": "Zuora Inc",
+      "location": "WFH, CR",
+      "since": "2022",
+      "to": "PRESENT",
+      "details": [
+        "Design, development, and improvement of in-house tools and scripts using Go and Python",
+        "Automating secret management workflows using GitHub Actions and Hashicorp Vault",
+        "Collaborate as an SRE team member to improve the reliability of the platform"
+      ]
+    },
+    {
       "position": "Solutions architect",
       "place": "Promerica Financial Corporation TI",
       "location": "Heredia, CR",
       "since": "2021",
-      "to": "PRESENT",
+      "to": "2022",
       "details": [
         "Definition and implementation of different cloud architectures using tools like Ansible and Terraform",
         "Evaluating different solutions for compliance with both enterprise and business standards",
@@ -153,7 +165,18 @@
       "place": "Babel Learning"
     }
   ],
-
+  "contributions": [
+    {
+      "repo": "oracle/node-oracledb",
+      "url": "https://github.com/oracle/node-oracledb",
+      "links": [
+        {
+          "label": "PR-1190",
+          "url": "https://github.com/oracle/node-oracledb/pull/1190"
+        }
+      ]
+    }
+  ],
   "skills": {
     "languages": [
       "Go",
@@ -196,6 +219,11 @@
         "title": "AWS Certified Developer - Associate",
         "imgUrl": "https://github.com/ArcezD/arcezd/raw/main/assets/aws-dva.png",
         "url": "https://www.credly.com/badges/de82fb9f-7814-4519-b5c1-c2ba238c3ac7/public_url"
+      },
+      {
+        "title": "AWS Certified SysOps Administrator – Associate",
+        "imgUrl": "https://github.com/arcezd/arcezd/raw/main/assets/aws-soa.png",
+        "url": "https://www.credly.com/badges/cbfd3f3c-e1ae-4c2c-b823-51a766a3240a/public_url"
       }
     ],
     "linuxfoundation": [

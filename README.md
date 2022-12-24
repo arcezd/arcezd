@@ -3,7 +3,7 @@
 </div>
 
 <div align="center">
-  <h3>:computer: Cloud Solutions Architect at <a href="https://www.grupopromerica.com">Grupo Promerica</a> | Co-Founder & CTO <a href="https://bits.cr">@bits.cr</a> :briefcase:</h3>
+  <h3>:computer: Site Reliability Engineer at <a href="https://zuora.com/">Zuora</a> | Co-Founder & CTO <a href="https://bits.cr">@bits.cr</a> :briefcase:</h3>
 </div>
 
 <ul>
@@ -65,6 +65,9 @@
   </a>
   <a align="right" href="https://www.credly.com/badges/de82fb9f-7814-4519-b5c1-c2ba238c3ac7/public_url">
     <img src="https://github.com/arcezd/arcezd/raw/main/assets/aws-dva.png" alt="AWS Certified Developer Associate" width="80" height="80" />
+  </a>
+  <a align="right" href="https://www.credly.com/badges/cbfd3f3c-e1ae-4c2c-b823-51a766a3240a/public_url">
+    <img src="https://github.com/arcezd/arcezd/raw/main/assets/aws-soa.png" alt="AWS Certified SysOps Administrator – Associate" width="80" height="80" />
   </a>
   <a align="right" href="https://www.credly.com/badges/15438b2b-9e95-4c1c-9056-893c90f1a94a/public_url">
     <img src="https://github.com/arcezd/arcezd/raw/main/assets/azure-az900.png" alt="Azure Fundamentals" width="80" height="80" />

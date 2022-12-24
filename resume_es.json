@@ -5,7 +5,7 @@
     "secondSurname": "Espinoza",
     "birthdate": "1991-11-24T08:43:00Z",
     "bio": [
-      "AWS Certified (Solutions Architect | Developer) Asociate",
+      "AWS Certified (Solutions Architect | Developer | SysOps) Associate",
       "Certified Kubernetes Administrator",
       "Arquitecto de Soluciones Cloud con más de 6 años de experiencia,",
       "apasionado por las nuevas tecnologías,",
@@ -46,14 +46,26 @@
   },
   "experience": [
     {
+      "position": "Site Reliability Engineer",
+      "place": "Zuora Inc",
+      "location": "WFH, CR",
+      "since": "2022",
+      "to": "PRESENT",
+      "details": [
+        "Diseño, desarrollo y mejora de herramientas y scripts internos utilizando Go y Python",
+        "Automatización del manejo de secretos utilizando GitHub Actions y Hashicorp Vault",
+        "Colaborar como miembro del equipo de SREs para mejorar la confiabilidad de la plataforma"
+      ]
+    },
+    {
       "position": "Arquitecto de Soluciones",
       "place": "Promerica Financial Corporation TI",
       "location": "Heredia, CR",
       "since": "2021",
-      "to": "PRESENT",
+      "to": "2022",
       "details": [
-        "Definición e implementación de diferentes arquitecturas cloud utilizando herramientas como Ansible y Terraform",
-        "Evaluación de diferentes soluciones para asegurar el cumplimiento de los estándares empresariales y del negocio",
+        "Definición e implementación de arquitecturas cloud con herramientas como Ansible y Terraform",
+        "Evaluación de soluciones asegurando el cumplimiento de los estándares empresariales y del negocio",
         "Colaborar con los equipos de desarrollo del grupo financiero en el logro de metas"
       ]
     },
@@ -114,10 +126,10 @@
       "to": "2018",
       "workplace": "Grupo Mutual",
       "details": [
-        "Diseño e implementación de patrones de arquitectura de microservicios (Basados en Event-driven, circuit breakers).",
-        "Implementación de una estrategia DevOps para el despliegue de microservicios utilizando contenedores Docker.",
+        "Diseño e implementación de patrones de arquitectura de microservicios (Event-driven, circuit breakers, entre otros)",
+        "Implementación de una estrategia DevOps para el despliegue de los microservicios",
         "Despliegue del cluster Docker Swarm para la orquestación de contenedores en producción.",
-        "Desarrollo de componentes core para la arquitectura de microservicios utilizando 'Spring Cloud Platform'. (Netflix Eureka, Spring Cloud Config, Netflix Zuul Api Gateway)"
+        "Desarrollo de los componentes core para la arquitectura de microservicios."
       ]
     }
   ],
@@ -204,6 +216,11 @@
         "title": "AWS Certified Developer - Associate",
         "imgUrl": "https://github.com/ArcezD/arcezd/raw/main/assets/aws-dva.png",
         "url": "https://www.credly.com/badges/de82fb9f-7814-4519-b5c1-c2ba238c3ac7/public_url"
+      },
+      {
+        "title": "AWS Certified SysOps Administrator – Associate",
+        "imgUrl": "https://github.com/arcezd/arcezd/raw/main/assets/aws-soa.png",
+        "url": "https://www.credly.com/badges/cbfd3f3c-e1ae-4c2c-b823-51a766a3240a/public_url"
       }
     ],
     "linuxfoundation": [

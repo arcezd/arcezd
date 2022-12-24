@@ -30,6 +30,13 @@ async function renderResumeHtml() {
     const dataStr = await readFile(resumeTemplateData, 'utf8');
     const templateLang = JSON.parse(langTemplateJsonStr);
     let data = JSON.parse(dataStr);
+
+    // Keep only the last 5 jobs experience
+    data.experience = data.experience.slice(0, 5);
+
+    // Remove contributions for new resumes
+    data.contributions = [];
+
     // Load compilation data
     if (TAG_REF_V && COMMIT_SHA && GITHUB_REPO_URL) {
       data = {
