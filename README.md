@@ -3,7 +3,7 @@
 </div>
 
 <div align="center">
-  <h3>:computer: Cloud Solutions Architect at <a href="https://www.grupopromerica.com">Grupo Promerica</a> | Co-Founder & CTO <a href="https://bits.cr">@bits.cr</a> :briefcase:</h3>
+  <h3>:computer: Site Reliability Engineer at <a href="https://zuora.com/">Zuora</a> | Co-Founder & CTO <a href="https://bits.cr">@bits.cr</a> :briefcase:</h3>
 </div>
 
 <ul>

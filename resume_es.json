@@ -46,11 +46,23 @@
   },
   "experience": [
     {
+      "position": "Site Reliability Engineer",
+      "place": "Zuora Inc",
+      "location": "WFH, CR",
+      "since": "2022",
+      "to": "PRESENT",
+      "details": [
+        "Diseño, desarrollo y mejora de herramientas y scripts internos utilizando Go y Python",
+        "Automatización del manejo de secretos utilizando GitHub Actions y Hashicorp Vault",
+        "Colaborar como miembro del equipo de SREs para mejorar la confiabilidad de la plataforma"
+      ]
+    },
+    {
       "position": "Arquitecto de Soluciones",
       "place": "Promerica Financial Corporation TI",
       "location": "Heredia, CR",
       "since": "2021",
-      "to": "PRESENT",
+      "to": "2022",
       "details": [
         "Definición e implementación de diferentes arquitecturas cloud utilizando herramientas como Ansible y Terraform",
         "Evaluación de diferentes soluciones para asegurar el cumplimiento de los estándares empresariales y del negocio",
