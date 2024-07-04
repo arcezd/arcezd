@@ -7,7 +7,7 @@
     "bio": [
       "AWS Certified (Solutions Architect | Developer | SysOps) Associate",
       "Certified Kubernetes Administrator",
-      "Arquitecto de Soluciones Cloud con más de 6 años de experiencia,",
+      "Arquitecto de Soluciones Cloud con más de 8 años de experiencia,",
       "apasionado por las nuevas tecnologías,",
       "buscando cambiar el mundo con algo de código binario."
     ]
@@ -36,7 +36,7 @@
       "href": "https://github.arce.cr"
     },
     "linkedIn": {
-      "label": "linkedIn.arce.cr",
+      "label": "linkedin.arce.cr",
       "href": "https://linkedIn.arce.cr"
     },
     "twitter": {
@@ -46,11 +46,24 @@
   },
   "experience": [
     {
+      "position": "Staff Software Engineer",
+      "place": "Zuora Inc",
+      "location": "WFH, CR",
+      "since": "2023",
+      "to": "PRESENT",
+      "details": [
+        "Liderando la gestión de clústers EKS implementando GitOps para despliegues eficientes",
+        "Impulsando la evolución de DevOps para integración continua y entrega sin interrupciones",
+        "Empoderando al equipo para optimizar la escalabilidad de la infraestructura AWS con Terraform",
+        "Desarrollando e implementando GitHub Actions internas para mejorar nuestros procesos DevOps"
+      ]
+    },
+    {
       "position": "Site Reliability Engineer",
       "place": "Zuora Inc",
       "location": "WFH, CR",
       "since": "2022",
-      "to": "PRESENT",
+      "to": "2023",
       "details": [
         "Diseño, desarrollo y mejora de herramientas y scripts internos utilizando Go y Python",
         "Automatización del manejo de secretos utilizando GitHub Actions y Hashicorp Vault",
@@ -177,14 +190,17 @@
   "skills": {
     "languages": [
       "Go",
-      "Javascript",
       "Python",
+      "Javascript",
       "Java",
       "Dart",
       "Swift",
       "Kotlin"
     ],
     "frameworks": [
+      "cobra",
+      "gin",
+      "click",
       "Node.js",
       "Spring Boot"
     ],
@@ -192,6 +208,7 @@
       "Docker",
       "Docker Swarm",
       "Kubernetes",
+      "FluxCD",
       "Terraform",
       "Ansible",
       "AWS",

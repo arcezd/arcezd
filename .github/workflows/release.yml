@@ -8,26 +8,24 @@ on:
 
 jobs:
   release:
-
     runs-on: ubuntu-latest
-
     steps:
     - name: Checkout repo
       id: checkout
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
     - name: Checkout html-resume repo
       id: checkout-html
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
       with:
         repository: arcezd/html-resume
         ref: 'v1.2.1'
         path: html
     - name: Setting compilation vars
       id: compilation-vars
-      run: echo ::set-output name=sha_short::$(git rev-parse --short HEAD)
+      run: echo "sha_short=$(git rev-parse --short HEAD)" >> $GITHUB_OUTPUT
     - name: Setup node
       id: setup-node
-      uses: actions/setup-node@v3
+      uses: actions/setup-node@v4
       with:
         node-version: '14.x'
     - name: Install dependencies
@@ -35,7 +33,7 @@ jobs:
       run: yarn install --frozen-lockfile
     - name: Import GPG key for bot
       id: bot-signing-key
-      uses: crazy-max/ghaction-import-gpg@v4
+      uses: crazy-max/ghaction-import-gpg@v6
       with:
         gpg_private_key: ${{ secrets.BOT_GPG_SIGNING_KEY }}
         passphrase: ${{ secrets.BOT_GPG_PASSPHRASE }}
@@ -55,8 +53,8 @@ jobs:
     - name: Get version number
       id: tag-vars
       run: | 
-        echo ::set-output name=version::$(sed -En 's|.*"version".+"(([0-9]+\.[0-9]+\.[0-9]+))".*|\1|p' package.json)
-        echo ::set-output name=git-tag::$(sed -En 's|.*"version".+"(([0-9]+\.[0-9]+\.[0-9]+))".*|refs/tags/v\1|p' package.json)
+        echo "version=$(sed -En 's|.*"version".+"(([0-9]+\.[0-9]+\.[0-9]+))".*|\1|p' package.json)" >> $GITHUB_OUTPUT
+        echo "git-tag=$(sed -En 's|.*"version".+"(([0-9]+\.[0-9]+\.[0-9]+))".*|\1|p' package.json)" >> $GITHUB_OUTPUT
     - name: Run task.js for PDF generation [EN]
       id: pdf-generation-en
       run: npm run pdf
@@ -98,13 +96,13 @@ jobs:
         args: --follow-symlinks
     - name: Upload resume PDF to artifacts [EN]
       id: upload-pdf-artifact-en
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: diego.arce_resume_en.pdf
         path: diego.arce_resume_en.pdf
     - name: Upload resume PDF to artifacts [ES]
       id: upload-pdf-artifact-es
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: diego.arce_resume_es.pdf
         path: diego.arce_resume_es.pdf
