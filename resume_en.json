@@ -5,7 +5,7 @@
     "secondSurname": "Espinoza",
     "birthdate": "1991-11-24T08:43:00Z",
     "bio": [
-      "Cloud Solutions Architect with 6+ years of industry experience,",
+      "Cloud Solutions Architect with 8+ years of industry experience,",
       "passionate about new technologies,",
       "looking to change the world with some binary code.",
       "AWS Certified (Solutions Architect | Developer | SysOps) Associate",
@@ -37,7 +37,7 @@
     },
     "linkedIn": {
       "label": "linkedIn.arce.cr",
-      "href": "https://linkedIn.arce.cr"
+      "href": "https://linkedin.arce.cr"
     },
     "twitter": {
       "label": "twitter.arce.cr",
@@ -46,11 +46,24 @@
   },
   "experience": [
     {
+      "position": "Staff Software Engineer",
+      "place": "Zuora Inc",
+      "location": "WFH, CR",
+      "since": "2023",
+      "to": "PRESENT",
+      "details": [
+        "Leading EKS cluster management with GitOps for streamlined deployments",
+        "Driving DevOps evolution for seamless integration and continuous delivery",
+        "Empowering team to optimize AWS infrastructure scalability via Terraform",
+        "Development and implementation internal GitHub Actions to improve our DevOps processes"
+      ]
+    },
+    {
       "position": "Site Reliability Engineer",
       "place": "Zuora Inc",
       "location": "WFH, CR",
       "since": "2022",
-      "to": "PRESENT",
+      "to": "2023",
       "details": [
         "Design, development, and improvement of in-house tools and scripts using Go and Python",
         "Automating secret management workflows using GitHub Actions and Hashicorp Vault",
@@ -180,14 +193,17 @@
   "skills": {
     "languages": [
       "Go",
-      "Javascript",
       "Python",
+      "Javascript",
       "Java",
       "Dart",
       "Swift",
       "Kotlin"
     ],
     "frameworks": [
+      "cobra",
+      "gin",
+      "click",
       "Node.js",
       "Spring Boot"
     ],
@@ -195,6 +211,7 @@
       "Docker",
       "Docker Swarm",
       "Kubernetes",
+      "FluxCD",
       "Terraform",
       "Ansible",
       "AWS",
