@@ -8,6 +8,8 @@ const fs = require('fs'),
 
 require('dotenv').config();
 
+const USE_LOCAL_CHROME = process.env.USE_LOCAL_CHROME || 'false';
+
 const HTML_TEMPLATE_SUBFOLDER = process.env.HTML_TEMPLATE_SUBFOLDER || 'html/default';
 const RESUME_LANGUAGE = process.env.RESUME_LANGUAGE || 'en';
 
@@ -83,7 +85,19 @@ async function extractVersionFromTagRef(tagRef) {
 async function generateResumePdf(htmlPath) {
   try {
     console.log(`Starting PDF generation`);
-    const browser = await puppeteer.launch();
+    puppeteerOpts = {};
+    if (USE_LOCAL_CHROME === 'true') {
+      const args = [];
+      args.push('--no-sandbox');
+      args.push('--ignore-certificate-errors');
+      puppeteerOpts = {
+        headless: false,
+        executablePath: '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
+        ignoreHTTPSErrors: true,
+        args
+      };
+    }
+    const browser = await puppeteer.launch(puppeteerOpts);
     const page = await browser.newPage()
     await page.goto(`file:${htmlPath}`, {
       waitUntil: 'networkidle0'
