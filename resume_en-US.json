@@ -32,15 +32,32 @@
   },
   "socialMedia": {
     "github": {
-      "label": "arcezd",
+      "label": "github/arcezd",
       "href": "https://github.com/arcezd"
     },
     "linkedIn": {
-      "label": "arcezd",
+      "label": "linkedin/arcezd",
       "href": "https://linkedin.com/in/arcezd"
+    },
+    "credly": {
+      "label": "credly/arcezd",
+      "href": "https://www.credly.com/users/arcezd"
     }
   },
   "experience": [
+    {
+      "position": "Staff Software Engineer",
+      "place": "Zuora Inc",
+      "location": "WFH, CR",
+      "since": "2023-11-22T00:00:00.000Z",
+      "to": "TODAY",
+      "details": [
+        "Leading EKS cluster management with GitOps for streamlined deployments",
+        "Driving DevOps evolution for seamless integration and continuous delivery",
+        "Empowering team to optimize AWS infrastructure scalability via Terraform",
+        "Development and implementation internal GitHub Actions to improve our DevOps processes"
+      ]
+    },
     {
       "position": "Site Reliability Engineer",
       "place": "Zuora Inc",
@@ -115,9 +132,7 @@
       "name": "Microservices architecture improvement",
       "to": "2019",
       "workplace": "Promerica Financial Corporation TI",
-      "details": [
-        "Docker swarm clusters deployment automation using ANSIBLE."
-      ]
+      "details": ["Docker swarm clusters deployment automation using ANSIBLE."]
     },
     {
       "name": "Microservices architecture implementation from zero",
@@ -176,27 +191,70 @@
   "skills": {
     "languages": [
       "Go",
-      "Javascript",
       "Python",
+      "Javascript",
       "Java",
       "Dart",
       "Swift",
       "Kotlin"
     ],
-    "frameworks": [
-      "Node.js",
-      "Spring Boot"
-    ],
-    "Other": [
+    "frameworks": ["cobra", "gin", "click", "Node.js", "Spring Boot"],
+    "other": [
       "Docker",
       "Docker Swarm",
       "Kubernetes",
+      "FluxCD",
       "Terraform",
       "Ansible",
       "AWS",
       "Azure"
     ]
   },
+  "certifications": [{
+    "title": "KCSA: Kubernetes and Cloud Native Security Associate",
+    "issuedBy": "The Linux Foundation",
+    "issueDate": "2024-09-11T00:00:00.000Z",
+    "expirationDate": "2026-09-12T00:00:00.000Z"
+  },{
+    "title": "KCNA: Kubernetes and Cloud Native Associate",
+    "issuedBy": "The Linux Foundation",
+    "issueDate": "2024-09-02T00:00:00.000Z",
+    "expirationDate": "2026-09-03T00:00:00.000Z"
+  },{
+    "title": "CKAD: Certified Kubernetes Application Developer",
+    "issuedBy": "The Linux Foundation",
+    "issueDate": "2024-08-30T00:00:00.000Z",
+    "expirationDate": "2026-08-31T00:00:00.000Z"
+  },{
+    "title": "AWS Certified Developer – Associate",
+    "issuedBy": "Amazon Web Services Training and Certification",
+    "issueDate": "2023-10-27T00:00:00.000Z",
+    "expirationDate": "2026-10-27T00:00:00.000Z"
+  },{
+    "title": "AWS Certified SysOps Administrator – Associate",
+    "issuedBy": "Amazon Web Services Training and Certification",
+    "issueDate": "2022-11-14T00:00:00.000Z",
+    "expirationDate": "2025-11-14T00:00:00.000Z"
+  },{
+    "title": "Certified in Cybersecurity (CC)",
+    "issuedBy": "ISC2",
+    "issueDate": "2022-10-04T00:00:00.000Z",
+    "expirationDate": "2025-10-31T00:00:00.000Z"
+  },{
+    "title": "AWS Certified Solutions Architect – Associate",
+    "issuedBy": "Amazon Web Services Training and Certification",
+    "issueDate": "2022-06-27T00:00:00.000Z",
+    "expirationDate": "2025-06-27T00:00:00.000Z"
+  },{
+    "title": "CKA: Certified Kubernetes Administrator",
+    "issuedBy": "The Linux Foundation",
+    "issueDate": "2021-11-09T00:00:00.000Z",
+    "expirationDate": "2024-11-09T00:00:00.000Z"
+  },{
+    "title": "Microsoft Certified: Azure Fundamentals",
+    "issuedBy": "Microsoft",
+    "issueDate": "2020-09-14T00:00:00.000Z"
+  }],
   "badges": {
     "azure": [
       {
