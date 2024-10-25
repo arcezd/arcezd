@@ -69,7 +69,7 @@ jobs:
       run: npm run pdf
       env:
         HTML_TEMPLATE_SUBFOLDER: html/default
-        RESUME_LANGUAGE: es
+        RESUME_LANGUAGE: es-CR
         TAG_REF_V: ${{ steps.tag-vars.outputs.git-tag }}
         COMMIT_SHA: ${{ steps.compilation-vars.outputs.sha_short }}
         GITHUB_REPO: ${{ github.repository }}
@@ -99,14 +99,14 @@ jobs:
       id: upload-pdf-artifact-en
       uses: actions/upload-artifact@v3
       with:
-        name: diego.arce_resume_en.pdf
-        path: diego.arce_resume_en.pdf
+        name: diego.arce_resume_en-US.pdf
+        path: diego.arce_resume_en-US.pdf
     - name: Upload resume PDF to artifacts [ES]
       id: upload-pdf-artifact-es
       uses: actions/upload-artifact@v3
       with:
-        name: diego.arce_resume_es.pdf
-        path: diego.arce_resume_es.pdf
+        name: diego.arce_resume_es-CR.pdf
+        path: diego.arce_resume_es-CR.pdf
     - name: Push changes and release tag
       id: git-push
       run: |
@@ -118,5 +118,5 @@ jobs:
         name: Release ${{ steps.tag-vars.outputs.version }}
         tag_name: ${{ steps.tag-vars.outputs.git-tag }}
         files: |
-          diego.arce_resume_en.pdf
-          diego.arce_resume_es.pdf
+          diego.arce_resume_en-US.pdf
+          diego.arce_resume_es-CR.pdf
