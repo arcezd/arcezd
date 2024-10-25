@@ -81,7 +81,7 @@ jobs:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         DEST_DIR: cv/api/v1/en/resume.json
-        SOURCE_DIR: resume_en.json
+        SOURCE_DIR: resume_en-US.json
       with:
         args: --follow-symlinks
     - name: Upload Resume JSON to S3 bucket [ES]
@@ -92,7 +92,7 @@ jobs:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         DEST_DIR: cv/api/v1/es/resume.json
-        SOURCE_DIR: resume_es.json
+        SOURCE_DIR: resume_es-CR.json
       with:
         args: --follow-symlinks
     - name: Upload resume PDF to artifacts [EN]
