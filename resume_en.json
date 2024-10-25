@@ -45,8 +45,8 @@
       "position": "Site Reliability Engineer",
       "place": "Zuora Inc",
       "location": "WFH, CR",
-      "since": "2022",
-      "to": "PRESENT",
+      "since": "2022-09-12T00:00:00.000Z",
+      "to": "2023-11-21T23:59:59.999Z",
       "details": [
         "Design, development, and improvement of in-house tools and scripts using Go and Python",
         "Automating secret management workflows using GitHub Actions and Hashicorp Vault",
@@ -57,8 +57,8 @@
       "position": "Solutions architect",
       "place": "Promerica Financial Corporation TI",
       "location": "Heredia, CR",
-      "since": "2021",
-      "to": "2022",
+      "since": "2021-07-05T00:00:00.000Z",
+      "to": "2022-09-09T23:59:59.999Z",
       "details": [
         "Definition and implementation of different cloud architectures using tools like Ansible and Terraform",
         "Evaluating different solutions for compliance with both enterprise and business standards",
@@ -69,8 +69,8 @@
       "position": "Software developer",
       "place": "Promerica Financial Corporation TI",
       "location": "Heredia, CR",
-      "since": "2018",
-      "to": "2021",
+      "since": "2018-11-05T00:00:00.000Z",
+      "to": "2021-07-04T23:59:59.999Z",
       "details": [
         "Development and implementation of microservices using technologies like Node.js, Kotlin and Java",
         "Containers Orchestration using Docker Swarm and Kubernetes"
@@ -80,8 +80,8 @@
       "position": "Software architect",
       "place": "Grupo Mutual",
       "location": "Alajuela, CR",
-      "since": "2016",
-      "to": "2018",
+      "since": "2016-05-01T00:00:00.000Z",
+      "to": "2018-10-28T23:59:59.999Z",
       "details": [
         "Development and implementation of microservices architecture using Java, Spring Cloud, Netflix Zuul, Netflix Eureka and Spring Framework",
         "Design and development for iOS applications. UX / UI for Mobile Banking Application"
@@ -91,8 +91,8 @@
       "position": "Support Systems",
       "place": "Grupo Mutual",
       "location": "Alajuela, CR",
-      "since": "2015",
-      "to": "2016",
+      "since": "2015-03-01T00:00:00.000Z",
+      "to": "2016-04-30T23:59:59.999Z",
       "details": [
         "Analysis and bugs fixes in the banking core software",
         "Oracle Forms 11g , Oracle Reports 11g and Oracle PL / SQL (Procedures, Triggers, etc.)"
@@ -102,8 +102,8 @@
       "position": "Technical Support",
       "place": "Grupo Mutual",
       "location": "Alajuela, CR",
-      "since": "2013",
-      "to": "2014",
+      "since": "2013-03-01T00:00:00.000Z",
+      "to": "2015-02-28T23:59:59.999Z",
       "details": [
         "Installation and maintenance of software and hardware of Dell equipment for final users.",
         "Architecture maintenance for Desktop virtualization using Citrix XenDesktop."

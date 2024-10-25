@@ -45,8 +45,8 @@
       "position": "Site Reliability Engineer",
       "place": "Zuora Inc",
       "location": "WFH, CR",
-      "since": "2022",
-      "to": "PRESENT",
+      "since": "2022-09-12T00:00:00.000Z",
+      "to": "2023-11-21T23:59:59.999Z",
       "details": [
         "Diseño, desarrollo y mejora de herramientas y scripts internos utilizando Go y Python",
         "Automatización del manejo de secretos utilizando GitHub Actions y Hashicorp Vault",
@@ -57,8 +57,8 @@
       "position": "Arquitecto de Soluciones",
       "place": "Promerica Financial Corporation TI",
       "location": "Heredia, CR",
-      "since": "2021",
-      "to": "2022",
+      "since": "2021-07-05T00:00:00.000Z",
+      "to": "2022-09-09T23:59:59.999Z",
       "details": [
         "Definición e implementación de arquitecturas cloud con herramientas como Ansible y Terraform",
         "Evaluación de soluciones asegurando el cumplimiento de los estándares empresariales y del negocio",
@@ -69,8 +69,8 @@
       "position": "Desarrollador de Software",
       "place": "Promerica Financial Corporation TI",
       "location": "Heredia, CR",
-      "since": "2018",
-      "to": "2021",
+      "since": "2018-11-05T00:00:00.000Z",
+      "to": "2021-07-04T23:59:59.999Z",
       "details": [
         "Desarrollo e implementación de microservicios utilizando tecnologías como Node.js, Kotlin y Java",
         "Orquestación de contenedores utilizando Docker Swarm"
@@ -80,8 +80,8 @@
       "position": "Arquitecto de Software",
       "place": "Grupo Mutual",
       "location": "Alajuela, CR",
-      "since": "2016",
-      "to": "2018",
+      "since": "2016-05-01T00:00:00.000Z",
+      "to": "2018-10-28T23:59:59.999Z",
       "details": [
         "Desarrollo e implementación de microservicios utilizando tecnologías como Java, Spring Cloud, Netflix Zuul, Netflix Eureka y Spring Framework",
         "Diseño y desarrollo de aplicaciones iOS. UX / UI para aplicaciones de banca digital"
@@ -91,8 +91,8 @@
       "position": "Soporte de Sistemas",
       "place": "Grupo Mutual",
       "location": "Alajuela, CR",
-      "since": "2015",
-      "to": "2016",
+      "since": "2015-03-01T00:00:00.000Z",
+      "to": "2016-04-30T23:59:59.999Z",
       "details": [
         "Análisis y solución de bugs en el software de core bancario",
         "Oracle Forms 11g , Oracle Reports 11g y Oracle PL / SQL (Procedures, Triggers, etc.)"
@@ -102,8 +102,8 @@
       "position": "Technical Support",
       "place": "Grupo Mutual",
       "location": "Alajuela, CR",
-      "since": "2013",
-      "to": "2014",
+      "since": "2013-03-01T00:00:00.000Z",
+      "to": "2015-02-28T23:59:59.999Z",
       "details": []
     }
   ],
