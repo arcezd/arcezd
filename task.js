@@ -8,8 +8,10 @@ const fs = require('fs'),
 
 require('dotenv').config();
 
+const USE_LOCAL_CHROME = process.env.USE_LOCAL_CHROME || 'false';
+
 const HTML_TEMPLATE_SUBFOLDER = process.env.HTML_TEMPLATE_SUBFOLDER || 'html/default';
-const RESUME_LANGUAGE = process.env.RESUME_LANGUAGE || 'en';
+const RESUME_LANGUAGE = process.env.RESUME_LANGUAGE || 'en-US';
 
 const TAG_REF_V = process.env.TAG_REF_V;
 const COMMIT_SHA = process.env.COMMIT_SHA;
@@ -31,13 +33,27 @@ async function renderResumeHtml() {
     const templateLang = JSON.parse(langTemplateJsonStr);
     let data = JSON.parse(dataStr);
 
-    // Keep only the last 5 jobs experience
+    // keep only the last 5 jobs experience
     data.experience = data.experience.slice(0, 5);
 
-    // Remove contributions for new resumes
+    // keep only the last 5 jobs experience
+    data.experience = data.experience.slice(0, 5);
+
+    // remove contributions for new resumes
     data.contributions = [];
 
-    // Load compilation data
+    // remove projects for new resumes
+    data.projects = [];
+
+    // remove education for new resumes
+    data.education = [];
+
+    // show only the last 5 skills
+    if (data.skills && data.skills.languages) data.skills.languages = data.skills.languages.slice(0, 5);
+    if (data.skills && data.skills.frameworks) data.skills.frameworks = data.skills.frameworks.slice(0, 5);
+    if (data.skills && data.skills.other) data.skills.other = data.skills.other.slice(0, 5);
+
+    // load compilation data
     if (TAG_REF_V && COMMIT_SHA && GITHUB_REPO_URL) {
       data = {
         ...data,
@@ -53,6 +69,50 @@ async function renderResumeHtml() {
     Handlebars.registerHelper('i18n', function (value) {
       if (templateLang[value]) return templateLang[value];
       else console.error(`Error mapping template 'i18n' variable for value: ${value}.`);
+    });
+
+    Handlebars.registerHelper('monthYearDate', function (value) {
+      if (value) {
+        // check if date is in ISO8601 format
+        if (!isNaN(Date.parse(value))) {
+          const date = new Date(value);
+          // parse date to short format
+          shortDate = date.toLocaleDateString(RESUME_LANGUAGE, { year: 'numeric', month: 'short' });
+          return shortDate;
+        } else if (value.toLowerCase() === 'today' || value.toLowerCase() === 'actual') {
+          return value;
+        }
+        else console.error(`Error mapping template 'shortDate' variable for value: ${value}.`);
+      }
+      else console.error(`Error mapping template 'shortDate' variable for value: ${value}.`);
+    });
+
+    Handlebars.registerHelper('shortDate', function (value) {
+      if (value) {
+        // check if date is in ISO8601 format
+        if (!isNaN(Date.parse(value))) {
+          const date = new Date(value);
+          // parse date to short format dd/MM/YY
+          dateString = date.toLocaleDateString(RESUME_LANGUAGE, { day: '2-digit', month: '2-digit', year: 'numeric' });
+          return dateString;
+        }
+        else console.error(`Error mapping template 'shortDate' variable for value: ${value}.`);
+      }
+      else console.error(`Error mapping template 'shortDate' variable for value: ${value}.`);
+    });
+
+    Handlebars.registerHelper('onlyYearDate', function (value) {
+      if (value) {
+        // check if date is in ISO8601 format
+        if (!isNaN(Date.parse(value))) {
+          const date = new Date(value);
+          // parse date to format year/month
+          dateString = date.toLocaleDateString(RESUME_LANGUAGE, { year: 'numeric' });
+          return dateString;
+        }
+        else console.error(`Error mapping template 'onlyYear' variable for value: ${value}.`);
+      }
+      else console.error(`Error mapping template 'onlyYear' variable for value: ${value}.`);
     });
 
     const template = Handlebars.compile(templateSrc);
@@ -83,7 +143,19 @@ async function extractVersionFromTagRef(tagRef) {
 async function generateResumePdf(htmlPath) {
   try {
     console.log(`Starting PDF generation`);
-    const browser = await puppeteer.launch();
+    puppeteerOpts = {};
+    if (USE_LOCAL_CHROME === 'true') {
+      const args = [];
+      args.push('--no-sandbox');
+      args.push('--ignore-certificate-errors');
+      puppeteerOpts = {
+        headless: false,
+        executablePath: '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
+        ignoreHTTPSErrors: true,
+        args
+      };
+    }
+    const browser = await puppeteer.launch(puppeteerOpts);
     const page = await browser.newPage()
     await page.goto(`file:${htmlPath}`, {
       waitUntil: 'networkidle0'

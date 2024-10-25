@@ -12,7 +12,7 @@
     "type": "git",
     "url": "git+https://github.com/arcezd/arcezd.git"
   },
-  "author": "Diego Arce <Diego@arce.cr> (https://github.com/arcezd)",
+  "author": "Diego Arce <diego@arce.cr> (https://github.com/arcezd)",
   "license": "UNLICENSED",
   "bugs": {
     "url": "https://github.com/arcezd/arcezd/issues"

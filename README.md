@@ -15,13 +15,10 @@
 #### :speech_balloon: Feel free to reach me at:
 <p>
   <a href="mailto:diego@arce.cr">
-    <img alt="Email" src="https://img.shields.io/badge/diego@arce.cr-0078D4.svg?&style=for-the-badge&logo=Microsoft-Outlook&logoColor=white" />
+    <img alt="Email" src="https://img.shields.io/badge/mail%20me-0078D4.svg?&style=for-the-badge&logo=Microsoft-Outlook&logoColor=white" />
   </a>
   <a href="https://www.linkedin.com/in/arcezd/">
     <img alt="LinkedIn" src="https://img.shields.io/badge/arcezd-0077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white" />
-  </a>
-  <a href="https://twitter.com/arcezd">
-    <img alt="Twitter" src="https://img.shields.io/badge/@arcezd-1DA1F2.svg?&style=for-the-badge&logo=twitter&logoColor=white" />
   </a>
 </p>
 
