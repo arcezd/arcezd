@@ -21,10 +21,6 @@
       "label": "diego@arce.cr",
       "href": "mailto:diego@arce.cr"
     },
-    "skype": {
-      "label": "arcezd",
-      "href": "skype:arcezd"
-    },
     "phoneNumber": {
       "label": "(+506) 7016-0087",
       "href": "tel:+506-70160087"
@@ -282,7 +278,7 @@
     "linuxfoundation": [
       {
         "title": "Certified Kubernetes Administrator",
-        "imgUrl": "https://github.com/ArcezD/arcezd/raw/main/assets/cnf-cka.png",
+        "imgUrl": "https://github.com/ArcezD/arcezd/raw/main/assets/cncf-cka.png",
         "url": "https://www.credly.com/badges/b6414e9d-03ed-403e-8650-2f9231e10bb1/public_url"
       }
     ]

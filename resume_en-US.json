@@ -5,7 +5,7 @@
     "secondSurname": "Espinoza",
     "birthdate": "1991-11-24T08:43:00Z",
     "bio": [
-      "Cloud Solutions Architect with 6+ years of industry experience,",
+      "Cloud Solutions Architect with 11+ years of industry experience,",
       "passionate about new technologies,",
       "looking to change the world with some binary code.",
       "AWS Certified (Solutions Architect | Developer | SysOps) Associate",
@@ -20,10 +20,6 @@
     "email": {
       "label": "diego@arce.cr",
       "href": "mailto:diego@arce.cr"
-    },
-    "skype": {
-      "label": "arcezd",
-      "href": "skype:arcezd?call"
     },
     "phoneNumber": {
       "label": "(+506) 7016-0087",
@@ -283,7 +279,7 @@
     "linuxfoundation": [
       {
         "title": "Certified Kubernetes Administrator",
-        "imgUrl": "https://github.com/ArcezD/arcezd/raw/main/assets/cnf-cka.png",
+        "imgUrl": "https://github.com/ArcezD/arcezd/raw/main/assets/cncf-cka.png",
         "url": "https://www.credly.com/badges/b6414e9d-03ed-403e-8650-2f9231e10bb1/public_url"
       }
     ]
