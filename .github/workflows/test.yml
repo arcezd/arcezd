@@ -1,0 +1,15 @@
+---
+name: Tests and linting
+
+on:
+  workflow_dispatch:
+    
+jobs:
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
+    - name: Run yamllint
+      id: test
+      run: |
+        echo "Hello world!"

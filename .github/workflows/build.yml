@@ -1,0 +1,94 @@
+---
+name: Build and release
+run-name: Build and relese resume {{ github.ref_name }}
+
+on:
+  push:
+    tags:
+    - 'v*.*.*'
+    - 'v*.*.*-beta.*'
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Build pdf and json resume
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repo
+      id: checkout
+      uses: actions/checkout@v4
+    - name: Checkout html-resume repo
+      id: checkout-html
+      uses: actions/checkout@v4
+      with:
+        repository: arcezd/html-resume
+        ref: 'v1.3.0'
+        path: html
+    - name: Setting compilation vars
+      id: compilation-vars
+      run: |
+        echo "sha_short=$(git rev-parse --short HEAD)" >> "$GITHUB_OUTPUT"
+    - name: Get version number
+      id: tag-vars
+      run: |
+        echo "version=$(sed -En 's|.*"version".+"(([0-9]+\.[0-9]+\.[0-9]+))".*|\1|p' package.json)" >> "$GITHUB_OUTPUT"
+        echo "git-tag=$(sed -En 's|.*"version".+"(([0-9]+\.[0-9]+\.[0-9]+))".*|refs/tags/v\1|p' package.json)" >> "$GITHUB_OUTPUT"
+    - name: Setup node
+      id: setup-node
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20.x'
+    - name: Install dependencies
+      id: install-dependencies
+      run: yarn install --frozen-lockfile
+    - name: Run task.js for PDF generation [EN]
+      id: pdf-generation-en
+      run: npm run pdf
+      env:
+        HTML_TEMPLATE_SUBFOLDER: html/default
+        TAG_REF_V: ${{ steps.tag-vars.outputs.git-tag }}
+        COMMIT_SHA: ${{ steps.compilation-vars.outputs.sha_short }}
+        GITHUB_REPO: ${{ github.repository }}
+    - name: Run task.js for PDF generation [ES]
+      id: pdf-generation-es
+      run: npm run pdf
+      env:
+        HTML_TEMPLATE_SUBFOLDER: html/default
+        RESUME_LANGUAGE: es-CR
+        TAG_REF_V: ${{ steps.tag-vars.outputs.git-tag }}
+        COMMIT_SHA: ${{ steps.compilation-vars.outputs.sha_short }}
+        GITHUB_REPO: ${{ github.repository }}
+    # - name: Upload Resume JSON to S3 bucket [EN]
+    #   id: upload-release-asset-json-en-to-s3
+    #   uses: arcezd/s3-cp-action@v0.0.1
+    #   env:
+    #     AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
+    #     AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+    #     AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+    #     DEST_DIR: cv/api/v1/en/resume.json
+    #     SOURCE_DIR: resume_en-US.json
+    #   with:
+    #     args: --follow-symlinks
+    # - name: Upload Resume JSON to S3 bucket [ES]
+    #   id: upload-release-asset-json-es-to-s3
+    #   uses: arcezd/s3-cp-action@v0.0.1
+    #   env:
+    #     AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
+    #     AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+    #     AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+    #     DEST_DIR: cv/api/v1/es/resume.json
+    #     SOURCE_DIR: resume_es-CR.json
+    #   with:
+    #     args: --follow-symlinks
+    - name: Upload resume PDF to artifacts [EN]
+      id: upload-pdf-artifact-en
+      uses: actions/upload-artifact@v4
+      with:
+        name: diego.arce_resume_en-US.pdf
+        path: diego.arce_resume_en-US.pdf
+    - name: Upload resume PDF to artifacts [ES]
+      id: upload-pdf-artifact-es
+      uses: actions/upload-artifact@v4
+      with:
+        name: diego.arce_resume_es-CR.pdf
+        path: diego.arce_resume_es-CR.pdf
