@@ -54,8 +54,23 @@
   <a href="https://www.arduino.cc/"><img src="https://img.shields.io/badge/-Arduino-00979D?style=for-the-badge&logo=Arduino&logoColor=white"/></a>
 </p>
 <p align="right">
+  <a align="right" href="https://www.credly.com/badges/b92cbdce-e74c-425c-84e9-b66e4fac50e6/public_url">
+    <img src="https://github.com/arcezd/arcezd/raw/main/assets/cncf-kubestronaut.png" alt="CNCF Kubestronaut" width="80" height="80" />
+  </a>
+  <a align="right" href="https://www.credly.com/badges/45770959-6b5e-4e00-9a5e-9135c7b96654/public_url">
+    <img src="https://github.com/arcezd/arcezd/raw/main/assets/cncf-cks.png" alt="Certified Kubernetes Security Specialist" width="80" height="80" />
+  </a>
   <a align="right" href="https://www.credly.com/badges/b6414e9d-03ed-403e-8650-2f9231e10bb1/public_url">
-    <img src="https://github.com/arcezd/arcezd/raw/main/assets/cnf-cka.png" alt="Certified Kubernetes Administrator" width="80" height="80" />
+    <img src="https://github.com/arcezd/arcezd/raw/main/assets/cncf-cka.png" alt="Certified Kubernetes Administrator" width="80" height="80" />
+  </a>
+  <a align="right" href="https://www.credly.com/badges/de9585da-8719-4bf4-986e-214f63a5d266/public_url">
+    <img src="https://github.com/arcezd/arcezd/raw/main/assets/cncf-ckad.png" alt="Certified Kubernetes Application Developer" width="80" height="80" />
+  </a>
+  <a align="right" href="https://www.credly.com/badges/cc0431e7-c5c6-48bd-add1-58fa8dddc5f5/public_url">
+    <img src="https://github.com/arcezd/arcezd/raw/main/assets/cncf-kcsa.png" alt="Kubernetes and Cloud Native Security Associate" width="80" height="80" />
+  </a>
+  <a align="right" href="https://www.credly.com/badges/a615af42-005b-4930-abd9-94fb533ff2f7/public_url">
+    <img src="https://github.com/arcezd/arcezd/raw/main/assets/cncf-kcna.png" alt="Kubernetes and Cloud Native Associate" width="80" height="80" />
   </a>
   <a align="right" href="https://www.credly.com/badges/caa2c571-7d28-42a8-beeb-cce1e453a5bf/public_url">
     <img src="https://github.com/arcezd/arcezd/raw/main/assets/aws-saa.png" alt="AWS Certified Solutions Architect Associate" width="80" height="80" />
@@ -66,11 +81,11 @@
   <a align="right" href="https://www.credly.com/badges/cbfd3f3c-e1ae-4c2c-b823-51a766a3240a/public_url">
     <img src="https://github.com/arcezd/arcezd/raw/main/assets/aws-soa.png" alt="AWS Certified SysOps Administrator – Associate" width="80" height="80" />
   </a>
-  <a align="right" href="https://www.credly.com/badges/c2c270b6-0e3c-47f5-b86a-fcd14b5a26c3/public_url">
-    <img src="https://github.com/arcezd/arcezd/raw/main/assets/ISC2-cc.png" alt="Certified in Cybersecurity" width="80" height="80" />
-  </a>
   <a align="right" href="https://www.credly.com/badges/15438b2b-9e95-4c1c-9056-893c90f1a94a/public_url">
     <img src="https://github.com/arcezd/arcezd/raw/main/assets/azure-az900.png" alt="Azure Fundamentals" width="80" height="80" />
+  </a>
+  <a align="right" href="https://www.credly.com/badges/c2c270b6-0e3c-47f5-b86a-fcd14b5a26c3/public_url">
+    <img src="https://github.com/arcezd/arcezd/raw/main/assets/ISC2-cc.png" alt="Certified in Cybersecurity" width="80" height="80" />
   </a>
 </p>
 
