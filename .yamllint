@@ -1,0 +1,15 @@
+---
+extends: default
+
+ignore: |
+  node_modules
+
+rules:
+  line-length:
+    max: 150
+  indentation:
+    spaces: 2
+    indent-sequences: consistent
+  truthy:
+    allowed-values: ['true', 'false']
+    check-keys: false

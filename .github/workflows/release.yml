@@ -1,10 +1,29 @@
+---
 name: Create new resume release
+run-name: >
+  Create new
+  ${{ (inputs.beta || (github.event_name == 'push' && github.ref_name == github.event.repository.default_branch )) && 'beta' || '' }}
+  resume release
 
 on:
   push:
     branches:
     - 'main'
-    - 'beta'
+  workflow_dispatch:
+    inputs:
+      beta:
+        description: 'Create a beta release'
+        required: false
+        default: false
+        type: boolean
+
+permissions:
+  contents: read
+
+env:
+  BETA_RELEASE: >-
+    ${{ github.event_name == 'push' && github.ref_name == github.event.repository.default_branch
+    || github.event_name == 'workflow_dispatch' && inputs.beta }}
 
 jobs:
   release:
@@ -12,26 +31,16 @@ jobs:
     steps:
     - name: Checkout repo
       id: checkout
-      uses: actions/checkout@v4
-    - name: Checkout html-resume repo
-      id: checkout-html
-      uses: actions/checkout@v4
-      with:
-        repository: arcezd/html-resume
-        ref: 'v1.3.0'
-        path: html
-    - name: Setting compilation vars
-      id: compilation-vars
-      run: |
-        echo "sha_short=$(git rev-parse --short HEAD)" >> "$GITHUB_OUTPUT"
-    - name: Setup node
-      id: setup-node
-      uses: actions/setup-node@v4
-      with:
-        node-version: '20.x'
-    - name: Install dependencies
-      id: install-dependencies
-      run: yarn install --frozen-lockfile
+      uses: actions/checkout@v5
+    - name: Install uv
+      id: setup-uv
+      uses: astral-sh/setup-uv@v6
+    - name: Setup Python
+      id: setup-python
+      run: uv python install
+    - name: Install commitizen
+      id: setup-commitizen
+      run: uv tool install Commitizen
     - name: Import GPG key for bot
       id: bot-signing-key
       uses: crazy-max/ghaction-import-gpg@v4
@@ -47,76 +56,19 @@ jobs:
         git config --global commit.gpgsign true
       env:
         KEY_ID: ${{ steps.bot-signing-key.outputs.keyid }}
-    - name: Create new version
+    - name: Bump version
+      id: version
       run: |
-        yarn config set version-git-tag true
-        yarn version --patch
-    - name: Get version number
-      id: tag-vars
-      run: |
-        echo "version=$(sed -En 's|.*"version".+"(([0-9]+\.[0-9]+\.[0-9]+))".*|\1|p' package.json)" >> "$GITHUB_OUTPUT"
-        echo "git-tag=$(sed -En 's|.*"version".+"(([0-9]+\.[0-9]+\.[0-9]+))".*|refs/tags/v\1|p' package.json)" >> "$GITHUB_OUTPUT"
-    - name: Run task.js for PDF generation [EN]
-      id: pdf-generation-en
-      run: npm run pdf
-      env:
-        HTML_TEMPLATE_SUBFOLDER: html/default
-        TAG_REF_V: ${{ steps.tag-vars.outputs.git-tag }}
-        COMMIT_SHA: ${{ steps.compilation-vars.outputs.sha_short }}
-        GITHUB_REPO: ${{ github.repository }}
-    - name: Run task.js for PDF generation [ES]
-      id: pdf-generation-es
-      run: npm run pdf
-      env:
-        HTML_TEMPLATE_SUBFOLDER: html/default
-        RESUME_LANGUAGE: es-CR
-        TAG_REF_V: ${{ steps.tag-vars.outputs.git-tag }}
-        COMMIT_SHA: ${{ steps.compilation-vars.outputs.sha_short }}
-        GITHUB_REPO: ${{ github.repository }}
-    - name: Upload Resume JSON to S3 bucket [EN]
-      id: upload-release-asset-json-en-to-s3
-      uses: arcezd/s3-cp-action@v0.0.1
-      env:
-        AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
-        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        DEST_DIR: cv/api/v1/en/resume.json
-        SOURCE_DIR: resume_en-US.json
-      with:
-        args: --follow-symlinks
-    - name: Upload Resume JSON to S3 bucket [ES]
-      id: upload-release-asset-json-es-to-s3
-      uses: arcezd/s3-cp-action@v0.0.1
-      env:
-        AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
-        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        DEST_DIR: cv/api/v1/es/resume.json
-        SOURCE_DIR: resume_es-CR.json
-      with:
-        args: --follow-symlinks
-    - name: Upload resume PDF to artifacts [EN]
-      id: upload-pdf-artifact-en
-      uses: actions/upload-artifact@v3
-      with:
-        name: diego.arce_resume_en-US.pdf
-        path: diego.arce_resume_en-US.pdf
-    - name: Upload resume PDF to artifacts [ES]
-      id: upload-pdf-artifact-es
-      uses: actions/upload-artifact@v3
-      with:
-        name: diego.arce_resume_es-CR.pdf
-        path: diego.arce_resume_es-CR.pdf
+        #!/bin/bash
+        # get the current version
+        current_semver=$(cz version -p)
+        # bump the version
+        cz bump \
+          ${{ env.BETA_RELEASE && '--prerelease beta' || '--changelog' }} \
+          ${{ github.run_number == 1 && '--yes' || '' }}
+        semver=$(cz version -p)
+        echo "semver=${semver}" >> "$GITHUB_OUTPUT"
     - name: Push changes and release tag
       id: git-push
       run: |
-        git push origin
-        git push origin --tags
-    - name: Create Github.com release
-      uses: softprops/action-gh-release@v1
-      with:
-        name: Release ${{ steps.tag-vars.outputs.version }}
-        tag_name: ${{ steps.tag-vars.outputs.git-tag }}
-        files: |
-          diego.arce_resume_en-US.pdf
-          diego.arce_resume_es-CR.pdf
+        git push --follow-tags

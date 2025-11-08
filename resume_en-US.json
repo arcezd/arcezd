@@ -5,7 +5,7 @@
     "secondSurname": "Espinoza",
     "birthdate": "1991-11-24T08:43:00Z",
     "bio": [
-      "Cloud Solutions Architect with 6+ years of industry experience,",
+      "Cloud Solutions Architect with 11+ years of industry experience,",
       "passionate about new technologies,",
       "looking to change the world with some binary code.",
       "AWS Certified (Solutions Architect | Developer | SysOps) Associate",
@@ -20,10 +20,6 @@
     "email": {
       "label": "diego@arce.cr",
       "href": "mailto:diego@arce.cr"
-    },
-    "skype": {
-      "label": "arcezd",
-      "href": "skype:arcezd?call"
     },
     "phoneNumber": {
       "label": "(+506) 7016-0087",
@@ -259,7 +255,7 @@
     "azure": [
       {
         "title": "Microsoft Certified: Azure Fundamentals",
-        "imgUrl": "https://github.com/ArcezD/arcezd/raw/main/assets/azure-az900.png",
+        "imgUrl": "https://github.com/arcezd/arcezd/raw/main/assets/azure-az900.png",
         "url": "https://www.credly.com/badges/15438b2b-9e95-4c1c-9056-893c90f1a94a/public_url"
       }
     ],
@@ -271,7 +267,7 @@
       },
       {
         "title": "AWS Certified Developer - Associate",
-        "imgUrl": "https://github.com/ArcezD/arcezd/raw/main/assets/aws-dva.png",
+        "imgUrl": "https://github.com/arcezd/arcezd/raw/main/assets/aws-dva.png",
         "url": "https://www.credly.com/badges/de82fb9f-7814-4519-b5c1-c2ba238c3ac7/public_url"
       },
       {
@@ -283,7 +279,7 @@
     "linuxfoundation": [
       {
         "title": "Certified Kubernetes Administrator",
-        "imgUrl": "https://github.com/ArcezD/arcezd/raw/main/assets/cnf-cka.png",
+        "imgUrl": "https://github.com/arcezd/arcezd/raw/main/assets/cncf-cka.png",
         "url": "https://www.credly.com/badges/b6414e9d-03ed-403e-8650-2f9231e10bb1/public_url"
       }
     ]
