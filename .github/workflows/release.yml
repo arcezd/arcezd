@@ -83,3 +83,6 @@ jobs:
       id: git-push
       run: |
         git push --follow-tags
+    - name: Build release
+      if: build
+      run: gh workflow run build.yml --ref v${{ steps.version.outputs.semver }}

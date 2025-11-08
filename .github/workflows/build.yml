@@ -8,10 +8,6 @@ on:
     - 'v*.*.*'
     - 'v*.*.*-beta.*'
   workflow_dispatch:
-    inputs:
-      tag:
-        description: 'Tag to build and release'
-        required: true
 
 jobs:
   build:
@@ -22,7 +18,7 @@ jobs:
       id: checkout
       uses: actions/checkout@v5
       with:
-        ref: ${{ github.event_name == 'push' && github.ref_name || github.event_name == 'workflow_dispatch' && inputs.tag }}
+        ref: ${{ github.ref_name }}
 
     - name: Checkout html-resume repo
       id: checkout-html
@@ -35,11 +31,6 @@ jobs:
       id: compilation-vars
       run: |
         echo "sha_short=$(git rev-parse --short HEAD)" >> "$GITHUB_OUTPUT"
-    - name: Get version number
-      id: tag-vars
-      run: |
-        echo "version=$(sed -En 's|.*"version".+"(([0-9]+\.[0-9]+\.[0-9]+))".*|\1|p' package.json)" >> "$GITHUB_OUTPUT"
-        echo "git-tag=$(sed -En 's|.*"version".+"(([0-9]+\.[0-9]+\.[0-9]+))".*|refs/tags/v\1|p' package.json)" >> "$GITHUB_OUTPUT"
     - name: Setup node
       id: setup-node
       uses: actions/setup-node@v6
@@ -52,13 +43,13 @@ jobs:
       id: setup-chromium
       uses: browser-actions/setup-chromium@v2
       with:
-        chromium-version: 'latest'
+        chrome-version: latest
     - name: Run task.js for PDF generation [EN]
       id: pdf-generation-en
       run: npm run pdf
       env:
         HTML_TEMPLATE_SUBFOLDER: html/default
-        TAG_REF_V: ${{ steps.tag-vars.outputs.git-tag }}
+        TAG_REF_V: ${{ github.ref_name }}
         COMMIT_SHA: ${{ steps.compilation-vars.outputs.sha_short }}
         GITHUB_REPO_URL: ${{ github.server_url }}/${{ github.repository }}
     - name: Run task.js for PDF generation [ES]
@@ -67,7 +58,7 @@ jobs:
       env:
         HTML_TEMPLATE_SUBFOLDER: html/default
         RESUME_LANGUAGE: es-CR
-        TAG_REF_V: ${{ steps.tag-vars.outputs.git-tag }}
+        TAG_REF_V: ${{ github.ref_name }}
         COMMIT_SHA: ${{ steps.compilation-vars.outputs.sha_short }}
         GITHUB_REPO_URL: ${{ github.server_url }}/${{ github.repository }}
     # - name: Upload Resume JSON to S3 bucket [EN]
