@@ -206,6 +206,11 @@
     ]
   },
   "certifications": [{
+    "title": "AWS Certified DevOps Engineer - Professional",
+    "issuedBy": "Amazon Web Services Training and Certification",
+    "issueDate": "2025-11-07T00:00:00.000Z",
+    "expirationDate": "2028-11-07T00:00:00.000Z"
+  }, {
     "title": "KCSA: Kubernetes and Cloud Native Security Associate",
     "issuedBy": "The Linux Foundation",
     "issueDate": "2024-09-11T00:00:00.000Z",
