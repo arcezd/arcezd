@@ -17,7 +17,7 @@ on:
       beta:
         description: 'Create a beta release'
         required: false
-        default: false
+        default: true
         type: boolean
 
 permissions:
@@ -86,3 +86,5 @@ jobs:
     - name: Build release
       id: build
       run: gh workflow run build.yml --ref v${{ steps.version.outputs.semver }}
+      env:
+        GH_TOKEN: ${{ github.token }}
