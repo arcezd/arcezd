@@ -1,0 +1,26 @@
+---
+name: Tests and linting
+
+on:
+  pull_request:
+    branches:
+    - main
+
+jobs:
+  yamllint:
+    name: YAML lint
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repo
+      id: checkout
+      uses: actions/checkout@v5
+    - name: Install uv
+      id: setup-uv
+      uses: astral-sh/setup-uv@v6
+    - name: Setup Python
+      id: setup-python
+      run: uv python install
+    - name: Run yamllint
+      id: yamllint
+      run: |
+        uvx yamllint .
