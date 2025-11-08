@@ -32,8 +32,6 @@ jobs:
     - name: Checkout repo
       id: checkout
       uses: actions/checkout@v5
-      with:
-        fetch-tags: true
     - name: Install uv
       id: setup-uv
       uses: astral-sh/setup-uv@v6
@@ -62,10 +60,16 @@ jobs:
       id: version
       run: |
         #!/bin/bash
-        # check list of tags
-        git tag --list
         # get the current version
         current_semver=$(cz version -p)
+        # check list of tags
+        git fetch origin refs/tags/$current_semver
+        # fail if the tag doesn't exist
+        git tag --list
+        if [ -z "$(git tag --list $current_semver)" ]; then
+          echo "Tag $current_semver does not exist. Exiting."
+          exit 1
+        fi
         # bump the version
         cz bump \
           ${{ env.BETA_RELEASE && '--prerelease beta' || '--changelog' }} \
