@@ -66,8 +66,8 @@ jobs:
         git fetch origin refs/tags/v$current_semver
         # fail if the tag doesn't exist
         git tag --list
-        if [ -z "$(git tag --list $current_semver)" ]; then
-          echo "Tag $current_semver does not exist. Exiting."
+        if [ -z "$(git tag --list v$current_semver)" ]; then
+          echo "Tag v$current_semver does not exist. Exiting."
           exit 1
         fi
         # bump the version
