@@ -32,6 +32,8 @@ jobs:
     - name: Checkout repo
       id: checkout
       uses: actions/checkout@v5
+      with:
+        fetch-tags: true
     - name: Install uv
       id: setup-uv
       uses: astral-sh/setup-uv@v6
