@@ -62,6 +62,8 @@ jobs:
       id: version
       run: |
         #!/bin/bash
+        # check list of tags
+        git tag --list
         # get the current version
         current_semver=$(cz version -p)
         # bump the version
