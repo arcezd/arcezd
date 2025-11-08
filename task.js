@@ -15,7 +15,7 @@ const RESUME_LANGUAGE = process.env.RESUME_LANGUAGE || 'en-US';
 
 const TAG_REF_V = process.env.TAG_REF_V;
 const COMMIT_SHA = process.env.COMMIT_SHA;
-const GITHUB_REPO_URL = `https://github.com/${process.env.GITHUB_REPO}`;
+const GITHUB_REPO_URL = process.env.GITHUB_REPO_URL;
 
 const resumeTemplatePath = path.join(__dirname, HTML_TEMPLATE_SUBFOLDER, `resume.html`);
 const resumeLangTemplateJSONPath = path.join(__dirname, HTML_TEMPLATE_SUBFOLDER, 'lang', `${RESUME_LANGUAGE}.json`);
@@ -127,11 +127,12 @@ async function renderResumeHtml() {
   }
 }
 
+// extract version from tag ref
 async function extractVersionFromTagRef(tagRef) {
   try {
-    const rExp = /^([A-Z]+)\/([A-Z]+)\/(v([0-9]+)\.([0-9]+)\.([0-9]+)(?:\.[0-9]+)?)/gi;
+    const rExp = /^([A-Z]+)\/([A-Z]+)\/(v([0-9]+)\.([0-9]+)\.([0-9]+)(?:-[a-z]+\.[0-9]+)?)/gi;
     const tagRefArray = rExp.exec(tagRef);
-    if (!tagRefArray) throw new Error('Incorrect git Tag Ref. Expected to be format: \'refs/tags/v0.0.1\'');
+    if (!tagRefArray) throw new Error('Incorrect git Tag Ref. Expected to be format: \'refs/tags/v0.0.1\' or \'refs/tags/v0.0.1-beta.1\'');
     return tagRefArray[3];
   } catch (err) {
     console.error(err.message);
