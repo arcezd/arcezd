@@ -226,15 +226,15 @@
     "issueDate": "2024-08-30T00:00:00.000Z",
     "expirationDate": "2026-08-31T00:00:00.000Z"
   },{
-    "title": "AWS Certified Developer – Associate",
+    "title": "AWS Certified Developer - Associate",
     "issuedBy": "Amazon Web Services Training and Certification",
     "issueDate": "2023-10-27T00:00:00.000Z",
-    "expirationDate": "2026-10-27T00:00:00.000Z"
+    "expirationDate": "2028-11-07T00:00:00.000Z"
   },{
-    "title": "AWS Certified SysOps Administrator – Associate",
+    "title": "AWS Certified SysOps Administrator - Associate",
     "issuedBy": "Amazon Web Services Training and Certification",
     "issueDate": "2022-11-14T00:00:00.000Z",
-    "expirationDate": "2025-11-14T00:00:00.000Z"
+    "expirationDate": "2028-11-07T00:00:00.000Z"
   },{
     "title": "Certified in Cybersecurity (CC)",
     "issuedBy": "ISC2",
@@ -244,7 +244,7 @@
     "title": "CKA: Certified Kubernetes Administrator",
     "issuedBy": "The Linux Foundation",
     "issueDate": "2021-11-09T00:00:00.000Z",
-    "expirationDate": "2024-11-09T00:00:00.000Z"
+    "expirationDate": "2026-08-26T00:00:00.000Z"
   },{
     "title": "Microsoft Certified: Azure Fundamentals",
     "issuedBy": "Microsoft",
