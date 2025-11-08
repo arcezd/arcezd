@@ -60,7 +60,7 @@ jobs:
         HTML_TEMPLATE_SUBFOLDER: html/default
         TAG_REF_V: ${{ steps.tag-vars.outputs.git-tag }}
         COMMIT_SHA: ${{ steps.compilation-vars.outputs.sha_short }}
-        GITHUB_REPO: ${{ github.repository }}
+        GITHUB_REPO_URL: ${{ github.server_url }}/${{ github.repository }}
     - name: Run task.js for PDF generation [ES]
       id: pdf-generation-es
       run: npm run pdf
@@ -69,7 +69,7 @@ jobs:
         RESUME_LANGUAGE: es-CR
         TAG_REF_V: ${{ steps.tag-vars.outputs.git-tag }}
         COMMIT_SHA: ${{ steps.compilation-vars.outputs.sha_short }}
-        GITHUB_REPO: ${{ github.repository }}
+        GITHUB_REPO_URL: ${{ github.server_url }}/${{ github.repository }}
     # - name: Upload Resume JSON to S3 bucket [EN]
     #   id: upload-release-asset-json-en-to-s3
     #   uses: arcezd/s3-cp-action@v0.0.1
