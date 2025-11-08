@@ -1,6 +1,6 @@
 ---
 name: Build and release
-run-name: Build and relese resume {{ github.ref_name }}
+run-name: Build and relese resume ${{ github.ref_name }}
 
 on:
   push:
