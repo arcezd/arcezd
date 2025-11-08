@@ -63,7 +63,7 @@ jobs:
         # get the current version
         current_semver=$(cz version -p)
         # check list of tags
-        git fetch origin refs/tags/v$current_semver
+        git fetch origin tag v$current_semver
         # fail if the tag doesn't exist
         git tag --list
         if [ -z "$(git tag --list v$current_semver)" ]; then
