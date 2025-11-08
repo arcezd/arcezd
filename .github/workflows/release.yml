@@ -18,7 +18,7 @@ on:
         type: boolean
 
 permissions:
-  contents: read
+  contents: write
 
 env:
   BETA_RELEASE: >-
@@ -43,7 +43,7 @@ jobs:
       run: uv tool install Commitizen
     - name: Import GPG key for bot
       id: bot-signing-key
-      uses: crazy-max/ghaction-import-gpg@v4
+      uses: crazy-max/ghaction-import-gpg@v6
       with:
         gpg_private_key: ${{ secrets.BOT_GPG_SIGNING_KEY }}
         passphrase: ${{ secrets.BOT_GPG_PASSPHRASE }}
@@ -65,7 +65,6 @@ jobs:
         # check list of tags
         git fetch origin tag v$current_semver
         # fail if the tag doesn't exist
-        git tag --list
         if [ -z "$(git tag --list v$current_semver)" ]; then
           echo "Tag v$current_semver does not exist. Exiting."
           exit 1
