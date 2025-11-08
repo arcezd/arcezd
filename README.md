@@ -72,8 +72,8 @@
   <a align="right" href="https://www.credly.com/badges/a615af42-005b-4930-abd9-94fb533ff2f7/public_url">
     <img src="https://github.com/arcezd/arcezd/raw/main/assets/cncf-kcna.png" alt="Kubernetes and Cloud Native Associate" width="80" height="80" />
   </a>
-  <a align="right" href="https://www.credly.com/badges/caa2c571-7d28-42a8-beeb-cce1e453a5bf/public_url">
-    <img src="https://github.com/arcezd/arcezd/raw/main/assets/aws-saa.png" alt="AWS Certified Solutions Architect Associate" width="80" height="80" />
+  <a align="right" href="https://www.credly.com/badges/d146cb20-4839-420c-805d-8e6045f2c2d3/public_url">
+    <img src="https://github.com/arcezd/arcezd/raw/main/assets/aws-dop.png" alt="AWS Certified DevOps Engineer Professional" width="80" height="80" />
   </a>
   <a align="right" href="https://www.credly.com/badges/de82fb9f-7814-4519-b5c1-c2ba238c3ac7/public_url">
     <img src="https://github.com/arcezd/arcezd/raw/main/assets/aws-dva.png" alt="AWS Certified Developer Associate" width="80" height="80" />
