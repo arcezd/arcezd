@@ -9,6 +9,9 @@ on:
   push:
     branches:
     - 'main'
+    paths:
+    - '**'
+    - '!.github/**'
   workflow_dispatch:
     inputs:
       beta:
@@ -19,6 +22,7 @@ on:
 
 permissions:
   contents: write
+  actions: write
 
 env:
   BETA_RELEASE: >-
