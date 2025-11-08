@@ -154,6 +154,11 @@ async function generateResumePdf(htmlPath) {
         ignoreHTTPSErrors: true,
         args
       };
+    } else {
+      puppeteerOpts = {
+        headless: true,
+        args: ['--no-sandbox', '--disable-setuid-sandbox']
+      };
     }
     const browser = await puppeteer.launch(puppeteerOpts);
     const page = await browser.newPage()
