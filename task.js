@@ -42,6 +42,7 @@ const resumePdfPath = path.join(
   __dirname,
   `diego.arce_resume_${RESUME_LANGUAGE}.pdf`
 );
+const assetsPath = path.join(__dirname, "assets");
 
 // Render resume to html
 async function renderResumeHtml() {
@@ -157,10 +158,18 @@ async function renderResumeHtml() {
             `Error mapping template 'onlyYear' variable for value: ${value}.`
           );
       } else console.error(`Error mapping template 'onlyYear' variable for value: ${value}.`);
-        }
-        else console.error(`Error mapping template 'onlyYear' variable for value: ${value}.`);
+    });
+
+    Handlebars.registerHelper("reverse", function (list, options) {
+      let out = "";
+      for (let i = list.length - 1; i >= 0; i--) {
+        out += options.fn(list[i]);
       }
-      else console.error(`Error mapping template 'onlyYear' variable for value: ${value}.`);
+      return out;
+    });
+
+    Handlebars.registerHelper("assetPath", function (assetFileName) {
+      return path.join(assetsPath, assetFileName);
     });
 
     const template = Handlebars.compile(templateSrc);
