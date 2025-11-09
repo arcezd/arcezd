@@ -33,11 +33,6 @@ jobs:
           repository: arcezd/html-resume
           ref: v1.3.1
           path: html
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: "20"
-          cache: "npm"
       - name: Setup node
         uses: actions/setup-node@v6
         with:
