@@ -12,6 +12,9 @@ on:
     paths:
     - '**'
     - '!.github/**'
+    - '!README.md'
+    - '!CHANGELOG.md'
+    - '!.cz.toml'
   workflow_dispatch:
     inputs:
       beta:
