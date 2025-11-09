@@ -205,82 +205,81 @@
       "Azure"
     ]
   },
-  "certifications": [{
-    "title": "AWS Certified DevOps Engineer - Professional",
-    "issuedBy": "Amazon Web Services Training and Certification",
-    "issueDate": "2025-11-07T00:00:00.000Z",
-    "expirationDate": "2028-11-07T00:00:00.000Z"
-  }, {
-    "title": "KCSA: Kubernetes and Cloud Native Security Associate",
-    "issuedBy": "The Linux Foundation",
-    "issueDate": "2024-09-11T00:00:00.000Z",
-    "expirationDate": "2026-09-12T00:00:00.000Z"
-  },{
-    "title": "KCNA: Kubernetes and Cloud Native Associate",
-    "issuedBy": "The Linux Foundation",
-    "issueDate": "2024-09-02T00:00:00.000Z",
-    "expirationDate": "2026-09-03T00:00:00.000Z"
-  },{
-    "title": "CKAD: Certified Kubernetes Application Developer",
-    "issuedBy": "The Linux Foundation",
-    "issueDate": "2024-08-30T00:00:00.000Z",
-    "expirationDate": "2026-08-31T00:00:00.000Z"
-  },{
-    "title": "AWS Certified Developer - Associate",
-    "issuedBy": "Amazon Web Services Training and Certification",
-    "issueDate": "2023-10-27T00:00:00.000Z",
-    "expirationDate": "2028-11-07T00:00:00.000Z"
-  },{
-    "title": "AWS Certified SysOps Administrator - Associate",
-    "issuedBy": "Amazon Web Services Training and Certification",
-    "issueDate": "2022-11-14T00:00:00.000Z",
-    "expirationDate": "2028-11-07T00:00:00.000Z"
-  },{
-    "title": "Certified in Cybersecurity (CC)",
-    "issuedBy": "ISC2",
-    "issueDate": "2022-10-04T00:00:00.000Z",
-    "expirationDate": "2025-10-31T00:00:00.000Z"
-  },{
-    "title": "CKA: Certified Kubernetes Administrator",
-    "issuedBy": "The Linux Foundation",
-    "issueDate": "2021-11-09T00:00:00.000Z",
-    "expirationDate": "2026-08-26T00:00:00.000Z"
-  },{
-    "title": "Microsoft Certified: Azure Fundamentals",
-    "issuedBy": "Microsoft",
-    "issueDate": "2020-09-14T00:00:00.000Z"
-  }],
-  "badges": {
-    "azure": [
-      {
-        "title": "Microsoft Certified: Azure Fundamentals",
-        "imgUrl": "https://github.com/arcezd/arcezd/raw/main/assets/azure-az900.png",
-        "url": "https://www.credly.com/badges/15438b2b-9e95-4c1c-9056-893c90f1a94a/public_url"
-      }
-    ],
-    "aws": [
-      {
-        "title": "AWS Certified Solutions Architect - Associate",
-        "imgUrl": "https://github.com/arcezd/arcezd/raw/main/assets/aws-saa.png",
-        "url": "https://www.credly.com/badges/caa2c571-7d28-42a8-beeb-cce1e453a5bf/public_url"
-      },
-      {
-        "title": "AWS Certified Developer - Associate",
-        "imgUrl": "https://github.com/arcezd/arcezd/raw/main/assets/aws-dva.png",
-        "url": "https://www.credly.com/badges/de82fb9f-7814-4519-b5c1-c2ba238c3ac7/public_url"
-      },
-      {
-        "title": "AWS Certified SysOps Administrator – Associate",
-        "imgUrl": "https://github.com/arcezd/arcezd/raw/main/assets/aws-soa.png",
-        "url": "https://www.credly.com/badges/cbfd3f3c-e1ae-4c2c-b823-51a766a3240a/public_url"
-      }
-    ],
-    "linuxfoundation": [
-      {
-        "title": "Certified Kubernetes Administrator",
-        "imgUrl": "https://github.com/arcezd/arcezd/raw/main/assets/cncf-cka.png",
-        "url": "https://www.credly.com/badges/b6414e9d-03ed-403e-8650-2f9231e10bb1/public_url"
-      }
-    ]
-  }
+  "certifications": [
+    {
+      "title": "AWS Certified DevOps Engineer - Professional",
+      "issuedBy": "Amazon Web Services Training and Certification",
+      "issueDate": "2025-11-07T00:00:00.000Z",
+      "expirationDate": "2028-11-07T00:00:00.000Z"
+    },
+    {
+      "title": "KCSA: Kubernetes and Cloud Native Security Associate",
+      "issuedBy": "The Linux Foundation",
+      "issueDate": "2024-09-11T00:00:00.000Z",
+      "expirationDate": "2026-09-12T00:00:00.000Z"
+    },
+    {
+      "title": "KCNA: Kubernetes and Cloud Native Associate",
+      "issuedBy": "The Linux Foundation",
+      "issueDate": "2024-09-02T00:00:00.000Z",
+      "expirationDate": "2026-09-03T00:00:00.000Z"
+    },
+    {
+      "title": "CKAD: Certified Kubernetes Application Developer",
+      "issuedBy": "The Linux Foundation",
+      "issueDate": "2024-08-30T00:00:00.000Z",
+      "expirationDate": "2026-08-31T00:00:00.000Z"
+    },
+    {
+      "title": "AWS Certified Developer - Associate",
+      "issuedBy": "Amazon Web Services Training and Certification",
+      "issueDate": "2023-10-27T00:00:00.000Z",
+      "expirationDate": "2028-11-07T00:00:00.000Z"
+    },
+    {
+      "title": "AWS Certified SysOps Administrator - Associate",
+      "issuedBy": "Amazon Web Services Training and Certification",
+      "issueDate": "2022-11-14T00:00:00.000Z",
+      "expirationDate": "2028-11-07T00:00:00.000Z"
+    },
+    {
+      "title": "Certified in Cybersecurity (CC)",
+      "issuedBy": "ISC2",
+      "issueDate": "2022-10-04T00:00:00.000Z",
+      "expirationDate": "2025-10-31T00:00:00.000Z"
+    },
+    {
+      "title": "CKA: Certified Kubernetes Administrator",
+      "issuedBy": "The Linux Foundation",
+      "issueDate": "2021-11-09T00:00:00.000Z",
+      "expirationDate": "2026-08-26T00:00:00.000Z"
+    },
+    {
+      "title": "Microsoft Certified: Azure Fundamentals",
+      "issuedBy": "Microsoft",
+      "issueDate": "2020-09-14T00:00:00.000Z"
+    }
+  ],
+  "badges": [
+    {
+      "title": "CNCF Kubestronaut",
+      "badgePng": "cncf-kubestronaut.png",
+      "url": "https://www.credly.com/badges/b92cbdce-e74c-425c-84e9-b66e4fac50e6/public_url"
+    },
+    {
+      "title": "AWS Certified DevOps Engineer - Professional",
+      "badgePng": "aws-dop.png",
+      "url": "https://www.credly.com/badges/d146cb20-4839-420c-805d-8e6045f2c2d3/public_url"
+    },
+    {
+      "title": "AWS Certified Developer - Associate",
+      "badgePng": "aws-dva.png",
+      "url": "https://www.credly.com/badges/764e739c-18f4-4ef8-a277-56fdb215c983/public_url"
+    },
+    {
+      "title": "AWS Certified SysOps Administrator - Associate",
+      "badgePng": "aws-soa.png",
+      "url": "https://www.credly.com/badges/543d2270-2ae4-43b8-a89a-3339b123cb1a/public_url"
+    }
+  ]
 }
