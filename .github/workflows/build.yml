@@ -14,23 +14,38 @@ jobs:
     name: Build pdf and json resume
     runs-on: ubuntu-latest
     steps:
+    - name: Fail if it's not a tag
+      if: github.ref_type != 'tag'
+      id: fail-if-not-tag
+      run: |
+        echo "Workflow triggered on ref type: ${{ github.ref_type }}" >> "$GITHUB_STEP_SUMMARY"
+        echo "Ref name: ${{ github.ref_name }}" >> "$GITHUB_STEP_SUMMARY"
+        echo "This workflow is intended to run only on tags" >> "$GITHUB_STEP_SUMMARY"
+        echo "This workflow only runs on tags"
+        echo "Exiting..."
+        exit 1
     - name: Checkout repo
       id: checkout
       uses: actions/checkout@v5
       with:
         ref: ${{ github.ref_name }}
-
     - name: Checkout html-resume repo
       id: checkout-html
       uses: actions/checkout@v5
       with:
         repository: arcezd/html-resume
-        ref: 'v1.3.0'
+        ref: 'v1.3.1'
         path: html
     - name: Setting compilation vars
       id: compilation-vars
       run: |
         echo "sha_short=$(git rev-parse --short HEAD)" >> "$GITHUB_OUTPUT"
+        # check if the tag is a beta tag
+        if [[ "${{ github.ref_name }}" == *"-beta."* ]]; then
+          echo "is_beta=true" >> "$GITHUB_OUTPUT"
+        else
+          echo "is_beta=false" >> "$GITHUB_OUTPUT"
+        fi
     - name: Setup node
       id: setup-node
       uses: actions/setup-node@v6
@@ -85,13 +100,22 @@ jobs:
     #     args: --follow-symlinks
     - name: Upload resume PDF to artifacts [EN]
       id: upload-pdf-artifact-en
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v5
       with:
         name: diego.arce_resume_en-US.pdf
         path: diego.arce_resume_en-US.pdf
     - name: Upload resume PDF to artifacts [ES]
       id: upload-pdf-artifact-es
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v5
       with:
         name: diego.arce_resume_es-CR.pdf
         path: diego.arce_resume_es-CR.pdf
+    - name: Create GitHub release
+      uses: softprops/action-gh-release@v2
+      with:
+        files: |
+          diego.arce_resume_en-US.pdf
+          diego.arce_resume_es-CR.pdf
+        generate_release_notes: true
+        name: Release ${{ github.ref_name }}
+        prerelease: ${{ steps.compilation-vars.outputs.is_beta }}
