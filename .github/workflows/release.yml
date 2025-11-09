@@ -40,6 +40,7 @@ jobs:
       id: checkout
       uses: actions/checkout@v5
       with:
+        fetch-depth: 0
         ssh-key: ${{ secrets.RELEASE_SSH_KEY }}
     - name: Install uv
       id: setup-uv
@@ -71,8 +72,6 @@ jobs:
         #!/bin/bash
         # get the current version
         current_semver=$(cz version -p)
-        # check list of tags
-        git fetch origin tag v$current_semver
         # fail if the tag doesn't exist
         if [ -z "$(git tag --list v$current_semver)" ]; then
           echo "Tag v$current_semver does not exist. Exiting."
