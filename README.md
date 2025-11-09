@@ -3,7 +3,7 @@
 </div>
 
 <div align="center">
-  <h3>:computer: Site Reliability Engineer at <a href="https://zuora.com/">Zuora</a></h3>
+  <h3>:computer: Principal Software Engineer [at] <a href="https://zuora.com/">Zuora</a></h3>
 </div>
 
 <ul>
