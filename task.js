@@ -107,7 +107,7 @@ async function renderResumeHtml() {
         if (!isNaN(Date.parse(value))) {
           const date = new Date(value);
           // parse date to short format
-          shortDate = date.toLocaleDateString(RESUME_LANGUAGE, {
+          const shortDate  = date.toLocaleDateString(RESUME_LANGUAGE, {
             year: "numeric",
             month: "short",
           });
@@ -130,7 +130,7 @@ async function renderResumeHtml() {
         if (!isNaN(Date.parse(value))) {
           const date = new Date(value);
           // parse date to short format dd/MM/YY
-          dateString = date.toLocaleDateString(RESUME_LANGUAGE, {
+          const dateString = date.toLocaleDateString(RESUME_LANGUAGE, {
             day: "2-digit",
             month: "2-digit",
             year: "numeric",
@@ -149,7 +149,7 @@ async function renderResumeHtml() {
         if (!isNaN(Date.parse(value))) {
           const date = new Date(value);
           // parse date to format year/month
-          dateString = date.toLocaleDateString(RESUME_LANGUAGE, {
+          const dateString = date.toLocaleDateString(RESUME_LANGUAGE, {
             year: "numeric",
           });
           return dateString;
