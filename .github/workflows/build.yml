@@ -64,7 +64,7 @@ jobs:
       run: npm run pdf
       env:
         HTML_TEMPLATE_SUBFOLDER: html/default
-        TAG_REF_V: ${{ github.ref_name }}
+        TAG_REF_V: ${{ github.ref }}
         COMMIT_SHA: ${{ steps.compilation-vars.outputs.sha_short }}
         GITHUB_REPO_URL: ${{ github.server_url }}/${{ github.repository }}
     - name: Run task.js for PDF generation [ES]
@@ -73,7 +73,7 @@ jobs:
       env:
         HTML_TEMPLATE_SUBFOLDER: html/default
         RESUME_LANGUAGE: es-CR
-        TAG_REF_V: ${{ github.ref_name }}
+        TAG_REF_V: ${{ github.ref }}
         COMMIT_SHA: ${{ steps.compilation-vars.outputs.sha_short }}
         GITHUB_REPO_URL: ${{ github.server_url }}/${{ github.repository }}
     # - name: Upload Resume JSON to S3 bucket [EN]
