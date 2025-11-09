@@ -107,7 +107,7 @@ async function renderResumeHtml() {
         if (!isNaN(Date.parse(value))) {
           const date = new Date(value);
           // parse date to short format
-          const shortDate  = date.toLocaleDateString(RESUME_LANGUAGE, {
+          const shortDate = date.toLocaleDateString(RESUME_LANGUAGE, {
             year: "numeric",
             month: "short",
           });
