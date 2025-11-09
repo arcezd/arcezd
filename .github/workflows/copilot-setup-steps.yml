@@ -25,21 +25,21 @@ jobs:
     # You can define any steps you want, and they will run before the agent starts.
     # If you do not check out your code, Copilot will do this for you.
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v5
-      - name: Checkout html-resume repo
-        uses: actions/checkout@v5
-        with:
-          repository: arcezd/html-resume
-          ref: v1.3.1
-          path: html
-      - name: Setup node
-        uses: actions/setup-node@v6
-        with:
-          node-version: '20.x'
-      - name: Install dependencies
-        run: yarn install --frozen-lockfile
-      - name: Setup Chromium
-        uses: browser-actions/setup-chromium@v2
-        with:
-          chrome-version: latest
+    - name: Checkout code
+      uses: actions/checkout@v5
+    - name: Checkout html-resume repo
+      uses: actions/checkout@v5
+      with:
+        repository: arcezd/html-resume
+        ref: v1.3.1
+        path: html
+    - name: Setup node
+      uses: actions/setup-node@v6
+      with:
+        node-version: '20.x'
+    - name: Install dependencies
+      run: yarn install --frozen-lockfile
+    - name: Setup Chromium
+      uses: browser-actions/setup-chromium@v2
+      with:
+        chrome-version: latest
