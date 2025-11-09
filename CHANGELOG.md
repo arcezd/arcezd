@@ -1,3 +1,9 @@
+## v1.2.0-beta.6 (2025-11-09)
+
+### Fix
+
+- **CI**: update tag ref var
+
 ## v1.2.0-beta.5 (2025-11-09)
 
 ### Fix
