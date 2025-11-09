@@ -77,9 +77,8 @@ jobs:
           exit 1
         fi
         # bump the version
-        cz bump \
-          ${{ env.BETA_RELEASE == 'true' && '--prerelease beta' || '--changelog' }} \
-          ${{ env.BETA_RELEASE == 'false' && '-nr 3' || '' }}
+        cz bump ${{ env.BETA_RELEASE == 'false' && '--no-raise 3' || '' }} \
+          ${{ env.BETA_RELEASE == 'true' && '--prerelease beta' || '--changelog' }}
         semver=$(cz version -p)
         echo "semver=${semver}" >> "$GITHUB_OUTPUT"
     - name: Push changes and release tag
