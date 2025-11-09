@@ -42,16 +42,28 @@
   },
   "experience": [
     {
+      "position": "Principal Software Engineer",
+      "place": "Zuora Inc",
+      "location": "WFH, CR",
+      "since": "2025-11-01T00:00:00.000Z",
+      "to": "TODAY",
+      "details": [
+        "Promoting reliability and scalability through secure EKS architecture and collaborative cloud practices",
+        "Driving the evolution of internal CI/CD automation frameworks through GitOps best practices",
+        "Partnering with leadership to align technical strategy and business outcomes effectively"
+      ]
+    },
+    {
       "position": "Staff Software Engineer",
       "place": "Zuora Inc",
       "location": "WFH, CR",
       "since": "2023-11-22T00:00:00.000Z",
-      "to": "TODAY",
+      "to": "2025-10-31T23:59:59.999Z",
       "details": [
         "Leading EKS cluster management with GitOps for streamlined deployments",
         "Driving DevOps evolution for seamless integration and continuous delivery",
         "Empowering team to optimize AWS infrastructure scalability via Terraform",
-        "Development and implementation internal GitHub Actions to improve our DevOps processes"
+        "Development and implementation of internal GitHub Actions workflows to improve our DevOps processes"
       ]
     },
     {
