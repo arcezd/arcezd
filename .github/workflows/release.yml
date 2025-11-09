@@ -14,6 +14,7 @@ on:
     - '!.github/**'
     - '!README.md'
     - '!CHANGELOG.md'
+    - '!package.json'
     - '!.cz.toml'
   workflow_dispatch:
     inputs:
@@ -87,8 +88,8 @@ jobs:
       id: git-push
       run: |
         git push --follow-tags
-    - name: Build release
-      id: build
-      run: gh workflow run build.yml --ref v${{ steps.version.outputs.semver }}
-      env:
-        GH_TOKEN: ${{ github.token }}
+    # - name: Build release
+    #   id: build
+    #   run: gh workflow run build.yml --ref v${{ steps.version.outputs.semver }}
+    #   env:
+    #     GH_TOKEN: ${{ github.token }}
