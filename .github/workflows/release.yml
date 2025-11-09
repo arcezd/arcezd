@@ -36,6 +36,8 @@ jobs:
     - name: Checkout repo
       id: checkout
       uses: actions/checkout@v5
+      with:
+        ssh-key: ${{ secrets.RELEASE_SSH_KEY }}
     - name: Install uv
       id: setup-uv
       uses: astral-sh/setup-uv@v6
