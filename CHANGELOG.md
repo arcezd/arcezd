@@ -1,3 +1,9 @@
+## v1.2.0-beta.7 (2025-11-09)
+
+### Fix
+
+- **CI**: update release conditionals
+
 ## v1.2.0-beta.6 (2025-11-09)
 
 ### Fix
