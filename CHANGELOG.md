@@ -1,3 +1,10 @@
+## v1.2.0-beta.11 (2025-11-10)
+
+### Fix
+
+- **CI**: dependabot ecosystem
+- **CI**: add dependabot.yml configuration
+
 ## v1.2.0-beta.10 (2025-11-09)
 
 ### Fix
