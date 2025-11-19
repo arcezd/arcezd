@@ -242,17 +242,19 @@ Key rules:
 - Ignores: `node_modules/`
 
 **Run yamllint**:
-```bash
-pip3 install yamllint
-yamllint .
-```
 
-Or with uv (as used in CI):
+Using uv (recommended, matches CI):
 ```bash
 # Install Python via uv
 uv python install
 # Run yamllint using uvx (which downloads and runs yamllint without installing it)
 uvx yamllint .
+```
+
+Alternative with pip3:
+```bash
+pip3 install yamllint
+yamllint .
 ```
 
 ## Testing
