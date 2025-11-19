@@ -247,15 +247,13 @@ pip3 install yamllint
 yamllint .
 ```
 
-Or with uv:
+Or with uv (as used in CI):
 ```bash
+# Install Python via uv
 uv python install
+# Run yamllint using uvx (which downloads and runs yamllint without installing it)
 uvx yamllint .
 ```
-
-### Current Linting Issues
-
-There are minor yamllint warnings in `.github/dependabot.yml` (insufficient spaces before comments). These can be safely ignored or fixed.
 
 ## Testing
 
