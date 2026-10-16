@@ -19,5 +19,6 @@ draft: true            # set to false (or delete the line) to publish
 ```
 
 Pushing to `main` under `blog/` deploys via `.github/workflows/blog.yml`
-(S3 + CloudFront). `infra/cloudfront/rewrite-index.js` is the viewer-request
-function that maps `/path/` and `/path` to `/path/index.html`.
+(S3 + CloudFront). The AWS infra, including the CloudFront Function that maps
+`/path/` and `/path` to `/path/index.html`, lives in
+[arcezd/arce-cr-iac](https://github.com/arcezd/arce-cr-iac) (`env/prod/blog`).

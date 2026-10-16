@@ -1,4 +1,4 @@
-baseURL = "https://example.com/" # TODO: your custom domain
+baseURL = "https://blog.arce.cr/"
 locale = "en-US"
 title = "Diego Arce"
 enableRobotsTXT = true

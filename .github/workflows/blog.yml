@@ -7,7 +7,6 @@ on:
     - main
     paths:
     - 'blog/**'
-    - '!blog/infra/**'
     - '.github/workflows/blog.yml'
   pull_request:
     branches:
@@ -27,7 +26,7 @@ concurrency:
 
 env:
   HUGO_VERSION: '0.168.0'
-  # TODO: replace placeholders (none of these are secrets)
+  # TODO: replace placeholders with the outputs of arce-cr-iac env/prod/blog (none are secrets)
   AWS_REGION: '<AWS_REGION>'  # region of the S3 bucket, e.g. us-east-1
   AWS_ROLE_ARN: '<IAM_ROLE_ARN>'  # arn:aws:iam::<account-id>:role/<github-oidc-deploy-role>
   S3_BUCKET: '<S3_BUCKET_NAME>'
