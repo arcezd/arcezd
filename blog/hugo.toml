@@ -1,0 +1,26 @@
+baseURL = "https://example.com/" # TODO: your custom domain
+locale = "en-US"
+title = "Diego Arce"
+enableRobotsTXT = true
+
+[params]
+  description = "Personal notes."
+
+[taxonomies]
+  tag = "tags"
+
+[markup.highlight]
+  noClasses = false # emit Chroma CSS classes; colors live in baseof.html
+
+[[menus.main]]
+  name = "About"
+  url = "/about/"
+  weight = 1
+[[menus.main]]
+  name = "Tags"
+  url = "/tags/"
+  weight = 2
+[[menus.main]]
+  name = "RSS"
+  url = "/index.xml"
+  weight = 3

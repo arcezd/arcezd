@@ -1,0 +1,71 @@
+---
+name: Deploy blog
+
+on:
+  push:
+    branches:
+    - main
+    paths:
+    - 'blog/**'
+    - '!blog/infra/**'
+    - '.github/workflows/blog.yml'
+  pull_request:
+    branches:
+    - main
+    paths:
+    - 'blog/**'
+    - '.github/workflows/blog.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  id-token: write  # OIDC token for aws-actions/configure-aws-credentials
+
+concurrency:
+  group: blog-${{ github.event_name == 'pull_request' && github.ref || 'deploy' }}
+  cancel-in-progress: false
+
+env:
+  HUGO_VERSION: '0.168.0'
+  # TODO: replace placeholders (none of these are secrets)
+  AWS_REGION: '<AWS_REGION>'  # region of the S3 bucket, e.g. us-east-1
+  AWS_ROLE_ARN: '<IAM_ROLE_ARN>'  # arn:aws:iam::<account-id>:role/<github-oidc-deploy-role>
+  S3_BUCKET: '<S3_BUCKET_NAME>'
+  CLOUDFRONT_DISTRIBUTION_ID: '<CLOUDFRONT_DISTRIBUTION_ID>'
+
+jobs:
+  deploy:
+    name: Build and deploy
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: blog
+    steps:
+    - name: Checkout repo
+      id: checkout
+      uses: actions/checkout@v5
+    - name: Install Hugo
+      id: setup-hugo
+      run: |
+        curl -fsSL -o "${RUNNER_TEMP}/hugo.deb" \
+          "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_linux-amd64.deb"
+        sudo dpkg -i "${RUNNER_TEMP}/hugo.deb"
+        hugo version
+    - name: Build site
+      id: build
+      run: hugo --minify --panicOnWarning
+    - name: Configure AWS credentials
+      id: aws-credentials
+      if: github.event_name != 'pull_request'
+      uses: aws-actions/configure-aws-credentials@v5
+      with:
+        role-to-assume: ${{ env.AWS_ROLE_ARN }}
+        aws-region: ${{ env.AWS_REGION }}
+    - name: Sync to S3
+      id: s3-sync
+      if: github.event_name != 'pull_request'
+      run: aws s3 sync public/ "s3://${S3_BUCKET}" --delete
+    - name: Invalidate CloudFront cache
+      id: cloudfront-invalidation
+      if: github.event_name != 'pull_request'
+      run: aws cloudfront create-invalidation --distribution-id "${CLOUDFRONT_DISTRIBUTION_ID}" --paths '/*'

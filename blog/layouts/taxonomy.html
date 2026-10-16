@@ -1,0 +1,8 @@
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+<ul class="posts">
+{{- range .Pages.ByTitle }}
+  <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a><span class="meta">{{ len .Pages }}</span></li>
+{{- end }}
+</ul>
+{{ end }}

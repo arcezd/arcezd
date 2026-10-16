@@ -12,6 +12,7 @@ on:
     paths:
     - '**'
     - '!.github/**'
+    - '!blog/**'
     - '!README.md'
     - '!CHANGELOG.md'
     - '!package.json'

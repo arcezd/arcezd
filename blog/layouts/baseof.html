@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="{{ site.Language.Locale }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} · {{ site.Title }}{{ end }}</title>
+<meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ if .IsPage }}{{ .Summary | plainify | truncate 160 }}{{ else }}{{ site.Params.description }}{{ end }}{{ end }}">
+<link rel="canonical" href="{{ .Permalink }}">
+{{ with site.Home.OutputFormats.Get "rss" }}<link rel="alternate" type="application/rss+xml" href="{{ .Permalink }}" title="{{ site.Title }}">{{ end }}
+<style>
+:root{color-scheme:light dark;--fg:#222;--bg:#fff;--mute:#6a6a6a;--a:#0b57d0;--code:#f4f4f4;
+  --k:#a626a4;--s:#50a14f;--c:#8a8a8a;--n:#986801;--f:#4078f2;--r:#d73a49}
+@media (prefers-color-scheme:dark){:root{--fg:#ddd;--bg:#121212;--mute:#9a9a9a;--a:#8ab4f8;--code:#1e1e1e;
+  --k:#c678dd;--s:#98c379;--c:#7f848e;--n:#d19a66;--f:#61afef;--r:#e06c75}}
+body{max-width:65ch;margin:0 auto;padding:1rem;color:var(--fg);background:var(--bg);
+  font:1rem/1.6 system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;overflow-wrap:break-word}
+a{color:var(--a)}
+header{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.5rem 1rem;margin:1rem 0 2.5rem}
+header a{text-decoration:none;color:inherit}
+nav a{margin-left:1rem}nav a:first-child{margin-left:0}
+h1,h2,h3{line-height:1.25}h2.year{font-size:1rem;margin:2rem 0 .5rem}
+ul.posts{list-style:none;padding:0;margin:0}
+ul.posts li{display:flex;gap:1rem;margin:.2rem 0}ul.posts time{flex:0 0 4em}
+time,.meta{color:var(--mute);font-variant-numeric:tabular-nums;white-space:nowrap}
+.meta{white-space:normal}
+code,pre{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.875em}
+pre{background:var(--code);padding:.75rem 1rem;overflow-x:auto;line-height:1.45;tab-size:4;border-radius:4px}
+pre code{font-size:inherit}
+:not(pre)>code{background:var(--code);padding:.1em .3em;border-radius:3px}
+img{max-width:100%;height:auto}
+blockquote{margin:1rem 0;padding-left:1rem;border-left:3px solid var(--mute);color:var(--mute)}
+table{border-collapse:collapse;display:block;overflow-x:auto}th,td{border:1px solid var(--code);padding:.25rem .5rem}
+.k,.kc,.kd,.kn,.kp,.kr,.kt,.ow,.nt{color:var(--k)}
+.s,.sa,.sb,.sc,.dl,.sd,.s1,.s2,.se,.sh,.si,.sx,.sr,.ss,.gi{color:var(--s)}
+.c,.ch,.cm,.c1,.cs,.cp,.cpf{color:var(--c);font-style:italic}
+.m,.mb,.mf,.mh,.mi,.il,.mo,.na,.nv{color:var(--n)}
+.nf,.fm,.nb,.bp,.nc,.nn{color:var(--f)}
+.gd,.err{color:var(--r)}.gh,.gu,.gs{font-weight:bold}.ge{font-style:italic}
+.hl{display:block;background:color-mix(in srgb,var(--f) 15%,transparent)}
+</style>
+</head>
+<body>
+<header>
+  <a href="/"><b>{{ site.Title }}</b></a>
+  <nav>{{ range site.Menus.main }}<a href="{{ .URL }}">{{ .Name }}</a>{{ end }}</nav>
+</header>
+<main>
+{{ block "main" . }}{{ end }}
+</main>
+</body>
+</html>

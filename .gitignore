@@ -202,3 +202,8 @@ package-lock.json
 
 # custom ignore files
 *_resume*.pdf
+
+# Hugo blog build output
+blog/public/
+blog/resources/_gen/
+.hugo_build.lock
